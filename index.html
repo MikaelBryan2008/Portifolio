@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mikael Bryan — Desenvolvedor Front-End</title>
+  <meta name="description" content="Portfólio de Mikael Bryan, desenvolvedor front-end especializado em interfaces modernas e responsivas.">
+
+  <!-- Fontes do Google Fonts: Space Grotesk (títulos) + Inter (texto corrido) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- ===================== NAVBAR ===================== -->
+  <!-- Navbar fixa no topo, com fundo translúcido que ganha blur ao rolar (controlado via JS) -->
+  <header class="navbar" id="navbar">
+    <nav class="navbar__inner">
+      <a href="#hero" class="navbar__logo">MB<span class="navbar__logo-dot">.</span></a>
+
+      <ul class="navbar__links">
+        <li><a href="#hero" class="navbar__link">Início</a></li>
+        <li><a href="#projetos" class="navbar__link">Projetos</a></li>
+        <li><a href="#sobre" class="navbar__link">Sobre</a></li>
+        <li><a href="#contato" class="navbar__link">Contato</a></li>
+      </ul>
+
+      <a href="#contato" class="btn btn--small btn--primary navbar__cta">Falar comigo</a>
+
+      <!-- Botão hambúrguer (some em telas grandes, via CSS) -->
+      <button class="navbar__toggle" id="navToggle" aria-label="Abrir menu" aria-expanded="false">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </nav>
+  </header>
+
+  <!-- Menu mobile (painel deslizante) -->
+  <div class="mobile-menu" id="mobileMenu">
+    <ul class="mobile-menu__links">
+      <li><a href="#hero" class="mobile-menu__link">Início</a></li>
+      <li><a href="#projetos" class="mobile-menu__link">Projetos</a></li>
+      <li><a href="#sobre" class="mobile-menu__link">Sobre</a></li>
+      <li><a href="#contato" class="mobile-menu__link">Contato</a></li>
+    </ul>
+  </div>
+
+  <main>
+    <!-- ===================== HERO SECTION ===================== -->
+    <section class="hero" id="hero">
+      <!-- Grade de fundo decorativa, puramente estética -->
+      <div class="hero__grid" aria-hidden="true"></div>
+
+      <div class="hero__content">
+        <p class="hero__eyebrow fade-up">Desenvolvedor Front-End</p>
+
+        <h1 class="hero__title fade-up">
+          Mikael Bryan
+        </h1>
+
+        <p class="hero__subtitle fade-up">
+          Desenvolvedor Front-end apaixonado por transformar ideias em sites modernos, rápidos e intuitivos.
+          Cada projeto é desenvolvido com atenção aos detalhes para oferecer a melhor experiência possível.
+        </p>
+
+        <div class="hero__actions fade-up">
+          <a href="#projetos" class="btn btn--primary">
+            Ver Projetos
+            <span class="btn__arrow">→</span>
+          </a>
+          <a href="#contato" class="btn btn--ghost">Entrar em contato</a>
+        </div>
+      </div>
+
+      <!-- Indicador de scroll discreto -->
+      <a href="#projetos" class="hero__scroll-hint" aria-label="Rolar para projetos">
+        <span class="hero__scroll-line"></span>
+        <span class="hero__scroll-text">Scroll</span>
+      </a>
+    </section>
+
+    <!-- ===================== SEÇÃO PROJETOS ===================== -->
+    <section class="projects" id="projetos">
+      <div class="section-header fade-up">
+        <p class="section-header__eyebrow">Trabalhos selecionados</p>
+        <h2 class="section-header__title">Projetos</h2>
+        <p class="section-header__subtitle">
+          Uma seleção de landing pages desenvolvidas com HTML, CSS e
+          JavaScript puro, com foco em design, performance e responsividade.
+        </p>
+      </div>
+
+      <div class="projects__grid">
+
+        <!-- Card 1: Landing Page Academia -->
+        <article class="card fade-up">
+          <div class="card__image-wrap">
+            <img
+              src="https://images.unsplash.com/photo-1534438327276-14e5300c3a48?q=80&w=800&auto=format&fit=crop"
+              alt="Tela inicial da landing page de academia, mostrando pessoa treinando em ambiente fitness"
+              class="card__image"
+              loading="lazy"
+            >
+            <span class="card__tag">Fitness</span>
+          </div>
+
+          <div class="card__body">
+            <h3 class="card__title">Landing Page Academia</h3>
+            <p class="card__description">
+              Página de captação para academias, com seções de planos,
+              depoimentos e formulário de matrícula. Foco em conversão e
+              identidade visual energética.
+            </p>
+
+            <div class="card__actions">
+              <a href="academia/index.html" class="btn btn--small btn--primary" target="_blank">Ver Projeto</a>
+              <a href="#" class="btn btn--small btn--ghost" target="_blank" rel="noopener noreferrer">
+                GitHub
+              </a>
+            </div>
+          </div>
+        </article>
+
+        <!-- Card 2: Restaurante Italiano -->
+        <article class="card fade-up">
+          <div class="card__image-wrap">
+            <img
+              src="https://images.unsplash.com/photo-1498837167922-ddd27525d352?q=80&w=800&auto=format&fit=crop"
+              alt="Mesa de restaurante italiano com massa fresca servida, ambiente elegante"
+              class="card__image"
+              loading="lazy"
+            >
+            <span class="card__tag">Gastronomia</span>
+          </div>
+
+          <div class="card__body">
+            <h3 class="card__title">Restaurante Italiano</h3>
+            <p class="card__description">
+              Site institucional para restaurante, apresentando cardápio,
+              ambiente e reservas online. Visual sofisticado com tipografia
+              elegante e fotos em destaque.
+            </p>
+
+            <div class="card__actions">
+              <a href="restaurante/index.html" class="btn btn--small btn--primary">Ver Projeto</a>
+              <a href="#" class="btn btn--small btn--ghost" target="_blank" rel="noopener noreferrer">
+                GitHub
+              </a>
+            </div>
+          </div>
+        </article>
+
+        <!-- Card 3: Barbearia -->
+        <article class="card fade-up">
+          <div class="card__image-wrap">
+            <img
+              src="https://images.unsplash.com/photo-1503951914875-452162b0f3f1?q=80&w=800&auto=format&fit=crop"
+              alt="Interior de barbearia moderna com cadeiras e espelhos"
+              class="card__image"
+              loading="lazy"
+            >
+            <span class="card__tag">Lifestyle</span>
+          </div>
+
+          <div class="card__body">
+            <h3 class="card__title">Barbearia</h3>
+            <p class="card__description">
+              Landing page para barbearia moderna, com agendamento de
+              horários, galeria de cortes e localização. Estética urbana e
+              contrastes marcantes.
+            </p>
+
+            <div class="card__actions">
+              <a href="barbearia/index.html" class="btn btn--small btn--primary">Ver Projeto</a>
+              <a href="#" class="btn btn--small btn--ghost" target="_blank" rel="noopener noreferrer">
+                GitHub
+              </a>
+            </div>
+          </div>
+        </article>
+
+      </div>
+    </section>
+
+    <!-- ===================== SOBRE ===================== -->
+    <section class="about" id="sobre">
+      <div class="about__content fade-up">
+        <p class="section-header__eyebrow">Sobre mim</p>
+        <h2 class="about__title">
+          Transformando ideias em experiências digitais.
+        </h2>
+        <p class="about__text">
+          Sou estudante de Análise e Desenvolvimento de Sistemas e desenvolvedor Front-end em constante evolução. 
+          Gosto de transformar ideias em interfaces modernas, responsivas e intuitivas, sempre buscando 
+          unir um código bem organizado com uma boa experiência para o usuário. 
+          Cada projeto representa uma oportunidade de aprender, evoluir e entregar um resultado de qualidade.
+        </p>
+
+        <div class="about__skills">
+          <span class="skill-pill">HTML5</span>
+          <span class="skill-pill">CSS3</span>
+          <span class="skill-pill">JavaScript</span>
+          <span class="skill-pill">Responsive Design</span>
+          <span class="skill-pill">Git &amp; GitHub</span>
+          <span class="skill-pill">UI/UX Principles</span>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ===================== FOOTER ===================== -->
+  <footer class="footer" id="contato">
+    <div class="footer__content">
+      <div class="footer__main">
+        <h2 class="footer__title">Vamos criar algo incrível?</h2>
+        <p class="footer__subtitle">
+          Se você procura um site moderno, responsivo ou deseja conversar sobre uma oportunidade profissional, ficarei feliz em falar com você. 
+          Entre em contato e vamos transformar sua ideia em realidade.
+        </p>
+        <a href="mailto:contato@mikaelbryan.dev" class="btn btn--primary footer__cta">
+          Enviar e-mail
+        </a>
+      </div>
+
+      <div class="footer__links">
+        <a href="https://github.com/MikaelBryan2008" target="_blank" rel="noopener noreferrer" class="footer__link">
+          GitHub
+        </a>
+        <a href="https://www.linkedin.com/in/mikael-bryan-51a531388/" target="_blank" rel="noopener noreferrer" class="footer__link">
+          LinkedIn
+        </a>
+        <a href="mailto:mikaelbryan2008@gmail.com" class="footer__link">
+          E-mail
+        </a>
+      </div>
+    </div>
+
+    <div class="footer__bottom">
+      <p>&copy; <span id="currentYear"></span> Mikael Bryan. Todos os direitos reservados.</p>
+      <button class="back-to-top" id="backToTop" aria-label="Voltar ao topo">↑</button>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

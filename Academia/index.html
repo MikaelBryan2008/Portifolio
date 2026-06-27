@@ -1,0 +1,612 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>PowerFit — Treine Forte. Viva Mais.</title>
+  <meta name="description" content="PowerFit: a academia premium para quem busca evolução real. Aulas experimentais gratuitas, personal trainers de elite e estrutura completa." />
+
+  <!-- ============ FONTES GOOGLE ============ -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Anton&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <!-- ============ ÍCONES (Phosphor Icons via CDN) ============ -->
+  <script src="https://unpkg.com/@phosphor-icons/web@2.1.1"></script>
+
+  <!-- ============ CSS PRÓPRIO ============ -->
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- ===================================================== -->
+  <!-- LOADER (animação de entrada)                           -->
+  <!-- ===================================================== -->
+  <div id="loader" class="loader" aria-hidden="true">
+    <span class="loader__logo">POWER<span class="text-purple">FIT</span></span>
+    <div class="loader__bar"><div class="loader__fill"></div></div>
+  </div>
+
+  <!-- ===================================================== -->
+  <!-- NAVBAR FIXA                                            -->
+  <!-- ===================================================== -->
+  <header class="navbar" id="navbar">
+    <div class="container navbar__inner">
+
+      <!-- Logo -->
+      <a href="#hero" class="navbar__logo">
+        POWER<span class="text-purple">FIT</span>
+      </a>
+
+      <!-- Links de navegação (desktop) -->
+      <nav class="navbar__nav" id="navMenu">
+        <a href="#beneficios" class="navbar__link">Benefícios</a>
+        <a href="#planos" class="navbar__link">Planos</a>
+        <a href="#trainers" class="navbar__link">Trainers</a>
+        <a href="#depoimentos" class="navbar__link">Depoimentos</a>
+        <a href="#galeria" class="navbar__link">Galeria</a>
+        <a href="#faq" class="navbar__link">FAQ</a>
+        <a href="#localizacao" class="navbar__link">Localização</a>
+      </nav>
+
+      <!-- CTA + botão hambúrguer -->
+      <div class="navbar__actions">
+        <a href="#contato" class="btn btn--primary btn--small">Aula Experimental</a>
+        <button class="navbar__toggle" id="navToggle" aria-label="Abrir menu" aria-expanded="false">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- ===================================================== -->
+    <!-- HERO SECTION                                           -->
+    <!-- ===================================================== -->
+    <section class="hero" id="hero">
+      <!-- Imagem de fundo da academia -->
+      <div class="hero__media">
+        <img
+          src="https://images.unsplash.com/photo-1534438327276-14e5300c3a48?q=80&w=1920&auto=format&fit=crop"
+          alt="Interior moderno da academia PowerFit com equipamentos de treino"
+          class="hero__img"
+        />
+        <div class="hero__overlay"></div>
+      </div>
+
+      <div class="container hero__content">
+        <p class="eyebrow fade-in">★ A evolução começa aqui</p>
+        <h1 class="hero__title fade-in">
+          SEU LIMITE<br>
+          É SÓ O <span class="text-purple">COMEÇO</span>
+        </h1>
+        <p class="hero__subtitle fade-in">
+          Estrutura premium, personal trainers de elite e uma comunidade que te empurra
+          pra frente todos os dias. Bem-vindo à PowerFit.
+        </p>
+
+        <div class="hero__actions fade-in">
+          <a href="#contato" class="btn btn--primary btn--large">
+            <i class="ph-bold ph-calendar-check"></i>
+            Agendar Aula Experimental
+          </a>
+          <a href="#beneficios" class="btn btn--ghost btn--large">
+            Saiba mais
+            <i class="ph-bold ph-arrow-down"></i>
+          </a>
+        </div>
+
+        <!-- Estatísticas rápidas -->
+        <div class="hero__stats fade-in">
+          <div class="hero__stat">
+            <span class="hero__stat-number" data-count="12">0</span><span class="text-purple">+</span>
+            <span class="hero__stat-label">Anos de mercado</span>
+          </div>
+          <div class="hero__stat">
+            <span class="hero__stat-number" data-count="3500">0</span><span class="text-purple">+</span>
+            <span class="hero__stat-label">Alunos ativos</span>
+          </div>
+          <div class="hero__stat">
+            <span class="hero__stat-number" data-count="40">0</span><span class="text-purple">+</span>
+            <span class="hero__stat-label">Trainers certificados</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Indicador de scroll -->
+      <button class="hero__scroll-indicator" id="scrollIndicator" aria-label="Rolar para baixo">
+        <i class="ph-bold ph-mouse-simple"></i>
+      </button>
+    </section>
+
+    <!-- ===================================================== -->
+    <!-- BENEFÍCIOS                                             -->
+    <!-- ===================================================== -->
+    <section class="section" id="beneficios">
+      <div class="container">
+        <div class="section__header fade-in">
+          <p class="eyebrow">Por que PowerFit</p>
+          <h2 class="section__title">Tudo que você precisa<br>pra <span class="text-purple">evoluir de verdade</span></h2>
+        </div>
+
+        <div class="benefits-grid">
+
+          <div class="benefit-card fade-in">
+            <div class="benefit-card__icon"><i class="ph-bold ph-barbell"></i></div>
+            <h3 class="benefit-card__title">Equipamentos de Ponta</h3>
+            <p class="benefit-card__text">Maquinário importado e renovado anualmente, para treinos seguros e eficientes.</p>
+          </div>
+
+          <div class="benefit-card fade-in">
+            <div class="benefit-card__icon"><i class="ph-bold ph-clock"></i></div>
+            <h3 class="benefit-card__title">Aberto 24 Horas</h3>
+            <p class="benefit-card__text">Treine quando quiser. Sua rotina não para, e a PowerFit também não.</p>
+          </div>
+
+          <div class="benefit-card fade-in">
+            <div class="benefit-card__icon"><i class="ph-bold ph-user-circle-gear"></i></div>
+            <h3 class="benefit-card__title">Acompanhamento Real</h3>
+            <p class="benefit-card__text">Avaliação física periódica e ajuste de treino com profissionais qualificados.</p>
+          </div>
+
+          <div class="benefit-card fade-in">
+            <div class="benefit-card__icon"><i class="ph-bold ph-drop"></i></div>
+            <h3 class="benefit-card__title">Espaço Wellness</h3>
+            <p class="benefit-card__text">Sauna, área de recuperação e bar de sucos naturais para o pós-treino.</p>
+          </div>
+
+          <div class="benefit-card fade-in">
+            <div class="benefit-card__icon"><i class="ph-bold ph-users-three"></i></div>
+            <h3 class="benefit-card__title">Aulas Coletivas</h3>
+            <p class="benefit-card__text">Funcional, spinning, yoga e muito mais — todas inclusas no seu plano.</p>
+          </div>
+
+          <div class="benefit-card fade-in">
+            <div class="benefit-card__icon"><i class="ph-bold ph-shield-check"></i></div>
+            <h3 class="benefit-card__title">Ambiente Seguro</h3>
+            <p class="benefit-card__text">Equipe de prontidão, totem de higienização e protocolo de segurança rígido.</p>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================================================== -->
+    <!-- PLANOS                                                 -->
+    <!-- ===================================================== -->
+    <section class="section section--alt" id="planos">
+      <div class="container">
+        <div class="section__header fade-in">
+          <p class="eyebrow">Planos</p>
+          <h2 class="section__title">Escolha o plano<br>do seu <span class="text-purple">próximo nível</span></h2>
+        </div>
+
+        <div class="plans-grid">
+
+          <!-- Plano Básico -->
+          <div class="plan-card fade-in">
+            <h3 class="plan-card__name">Start</h3>
+            <p class="plan-card__desc">Ideal pra quem está começando a jornada fitness.</p>
+            <div class="plan-card__price">
+              <span class="plan-card__currency">R$</span>
+              <span class="plan-card__value">89</span>
+              <span class="plan-card__period">/mês</span>
+            </div>
+            <ul class="plan-card__features">
+              <li><i class="ph-bold ph-check"></i> Acesso à musculação</li>
+              <li><i class="ph-bold ph-check"></i> Acesso em horário comercial</li>
+              <li><i class="ph-bold ph-check"></i> Avaliação física inicial</li>
+              <li class="is-disabled"><i class="ph-bold ph-x"></i> Aulas coletivas</li>
+              <li class="is-disabled"><i class="ph-bold ph-x"></i> Personal trainer</li>
+            </ul>
+            <a href="#contato" class="btn btn--outline btn--full">Quero este plano</a>
+          </div>
+
+          <!-- Plano Destaque -->
+          <div class="plan-card plan-card--featured fade-in">
+            <span class="plan-card__badge">Mais escolhido</span>
+            <h3 class="plan-card__name">Performance</h3>
+            <p class="plan-card__desc">Pra quem treina sério e quer resultado consistente.</p>
+            <div class="plan-card__price">
+              <span class="plan-card__currency">R$</span>
+              <span class="plan-card__value">149</span>
+              <span class="plan-card__period">/mês</span>
+            </div>
+            <ul class="plan-card__features">
+              <li><i class="ph-bold ph-check"></i> Acesso 24 horas</li>
+              <li><i class="ph-bold ph-check"></i> Todas as aulas coletivas</li>
+              <li><i class="ph-bold ph-check"></i> Avaliação física trimestral</li>
+              <li><i class="ph-bold ph-check"></i> Espaço wellness completo</li>
+              <li class="is-disabled"><i class="ph-bold ph-x"></i> Personal trainer dedicado</li>
+            </ul>
+            <a href="#contato" class="btn btn--primary btn--full">Quero este plano</a>
+          </div>
+
+          <!-- Plano Premium -->
+          <div class="plan-card fade-in">
+            <h3 class="plan-card__name">Elite</h3>
+            <p class="plan-card__desc">A experiência PowerFit completa, sem limites.</p>
+            <div class="plan-card__price">
+              <span class="plan-card__currency">R$</span>
+              <span class="plan-card__value">249</span>
+              <span class="plan-card__period">/mês</span>
+            </div>
+            <ul class="plan-card__features">
+              <li><i class="ph-bold ph-check"></i> Acesso 24 horas</li>
+              <li><i class="ph-bold ph-check"></i> Todas as aulas coletivas</li>
+              <li><i class="ph-bold ph-check"></i> Avaliação física mensal</li>
+              <li><i class="ph-bold ph-check"></i> Espaço wellness completo</li>
+              <li><i class="ph-bold ph-check"></i> 4 sessões de personal/mês</li>
+            </ul>
+            <a href="#contato" class="btn btn--outline btn--full">Quero este plano</a>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================================================== -->
+    <!-- PERSONAL TRAINERS                                      -->
+    <!-- ===================================================== -->
+    <section class="section" id="trainers">
+      <div class="container">
+        <div class="section__header fade-in">
+          <p class="eyebrow">Nossa equipe</p>
+          <h2 class="section__title">Personal Trainers<br>que <span class="text-purple">elevam seu jogo</span></h2>
+        </div>
+
+        <div class="trainers-grid">
+
+          <div class="trainer-card fade-in">
+            <div class="trainer-card__photo">
+              <img src="https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?q=80&w=600&auto=format&fit=crop" alt="Rafael Costa, personal trainer especialista em hipertrofia">
+            </div>
+            <h3 class="trainer-card__name">Rafael Costa</h3>
+            <p class="trainer-card__role">Especialista em Hipertrofia</p>
+            <div class="trainer-card__social">
+              <a href="#" aria-label="Instagram de Rafael Costa"><i class="ph-bold ph-instagram-logo"></i></a>
+              <a href="#" aria-label="LinkedIn de Rafael Costa"><i class="ph-bold ph-linkedin-logo"></i></a>
+            </div>
+          </div>
+
+          <div class="trainer-card fade-in">
+            <div class="trainer-card__photo">
+              <img src="https://images.unsplash.com/photo-1548690312-e3b507d8c110?q=80&w=600&auto=format&fit=crop" alt="Marina Alves, personal trainer especialista em treinamento funcional">
+            </div>
+            <h3 class="trainer-card__name">Marina Alves</h3>
+            <p class="trainer-card__role">Treinamento Funcional</p>
+            <div class="trainer-card__social">
+              <a href="#" aria-label="Instagram de Marina Alves"><i class="ph-bold ph-instagram-logo"></i></a>
+              <a href="#" aria-label="LinkedIn de Marina Alves"><i class="ph-bold ph-linkedin-logo"></i></a>
+            </div>
+          </div>
+
+          <div class="trainer-card fade-in">
+            <div class="trainer-card__photo">
+              <img src="https://images.unsplash.com/photo-1517836357463-d25dfeac3438?q=80&w=600&auto=format&fit=crop" alt="Bruno Lima, personal trainer especialista em performance esportiva">
+            </div>
+            <h3 class="trainer-card__name">Bruno Lima</h3>
+            <p class="trainer-card__role">Performance Esportiva</p>
+            <div class="trainer-card__social">
+              <a href="#" aria-label="Instagram de Bruno Lima"><i class="ph-bold ph-instagram-logo"></i></a>
+              <a href="#" aria-label="LinkedIn de Bruno Lima"><i class="ph-bold ph-linkedin-logo"></i></a>
+            </div>
+          </div>
+
+          <div class="trainer-card fade-in">
+            <div class="trainer-card__photo">
+              <img src="https://images.unsplash.com/photo-1607962837359-5e7e89f86776?q=80&w=600&auto=format&fit=crop" alt="Carla Mendes, personal trainer especialista em emagrecimento">
+            </div>
+            <h3 class="trainer-card__name">Carla Mendes</h3>
+            <p class="trainer-card__role">Emagrecimento &amp; Definição</p>
+            <div class="trainer-card__social">
+              <a href="#" aria-label="Instagram de Carla Mendes"><i class="ph-bold ph-instagram-logo"></i></a>
+              <a href="#" aria-label="LinkedIn de Carla Mendes"><i class="ph-bold ph-linkedin-logo"></i></a>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================================================== -->
+    <!-- DEPOIMENTOS                                            -->
+    <!-- ===================================================== -->
+    <section class="section section--alt" id="depoimentos">
+      <div class="container">
+        <div class="section__header fade-in">
+          <p class="eyebrow">Depoimentos</p>
+          <h2 class="section__title">Quem treina aqui<br><span class="text-purple">não quer parar</span></h2>
+        </div>
+
+        <!-- Carrossel de depoimentos -->
+        <div class="testimonials" id="testimonials">
+          <div class="testimonials__track" id="testimonialsTrack">
+
+            <article class="testimonial-card">
+              <i class="ph-fill ph-quotes testimonial-card__icon"></i>
+              <p class="testimonial-card__text">
+                "Em 8 meses de PowerFit eu transformei não só o corpo, mas a disciplina.
+                Os trainers acompanham de verdade, não é só 'apertar parafuso'."
+              </p>
+              <div class="testimonial-card__author">
+                <img src="https://images.unsplash.com/photo-1633332755192-727a05c4013d?q=80&w=200&auto=format&fit=crop" alt="Foto de João Pedro">
+                <div>
+                  <strong>João Pedro</strong>
+                  <span>Aluno há 8 meses</span>
+                </div>
+              </div>
+            </article>
+
+            <article class="testimonial-card">
+              <i class="ph-fill ph-quotes testimonial-card__icon"></i>
+              <p class="testimonial-card__text">
+                "A estrutura é simplesmente outro nível. Equipamentos sempre funcionando,
+                ambiente limpo e uma energia contagiante em cada treino."
+              </p>
+              <div class="testimonial-card__author">
+                <img src="https://images.unsplash.com/photo-1554151228-14d9def656e4?q=80&w=200&auto=format&fit=crop" alt="Foto de Fernanda Souza">
+                <div>
+                  <strong>Fernanda Souza</strong>
+                  <span>Aluna há 2 anos</span>
+                </div>
+              </div>
+            </article>
+
+            <article class="testimonial-card">
+              <i class="ph-fill ph-quotes testimonial-card__icon"></i>
+              <p class="testimonial-card__text">
+                "Já passei por várias academias e nenhuma chega perto do nível de atenção
+                que recebo aqui. Bati minha meta de performance em 3 meses."
+              </p>
+              <div class="testimonial-card__author">
+                <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?q=80&w=200&auto=format&fit=crop" alt="Foto de Lucas Tavares">
+                <div>
+                  <strong>Lucas Tavares</strong>
+                  <span>Aluno há 1 ano</span>
+                </div>
+              </div>
+            </article>
+
+          </div>
+
+          <!-- Controles do carrossel -->
+          <div class="testimonials__controls">
+            <button class="testimonials__btn" id="testimonialPrev" aria-label="Depoimento anterior">
+              <i class="ph-bold ph-arrow-left"></i>
+            </button>
+            <div class="testimonials__dots" id="testimonialDots"></div>
+            <button class="testimonials__btn" id="testimonialNext" aria-label="Próximo depoimento">
+              <i class="ph-bold ph-arrow-right"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================================================== -->
+    <!-- GALERIA                                                -->
+    <!-- ===================================================== -->
+    <section class="section" id="galeria">
+      <div class="container">
+        <div class="section__header fade-in">
+          <p class="eyebrow">Galeria</p>
+          <h2 class="section__title">Conheça nosso<br><span class="text-purple">espaço por dentro</span></h2>
+        </div>
+
+        <div class="gallery-grid">
+          <div class="gallery-item fade-in gallery-item--big">
+            <img src="https://images.unsplash.com/photo-1571902943202-507ec2618e8f?q=80&w=900&auto=format&fit=crop" alt="Área de musculação da PowerFit">
+          </div>
+          <div class="gallery-item fade-in">
+            <img src="https://images.unsplash.com/photo-1576678927484-cc907957088c?q=80&w=600&auto=format&fit=crop" alt="Equipamentos de peso livre">
+          </div>
+          <div class="gallery-item fade-in">
+            <img src="https://images.unsplash.com/photo-1540497077202-7c8a3999166f?q=80&w=600&auto=format&fit=crop" alt="Área de aulas coletivas">
+          </div>
+          <div class="gallery-item fade-in">
+            <img src="https://images.unsplash.com/photo-1593079831268-3381b0db4a77?q=80&w=600&auto=format&fit=crop" alt="Esteiras e equipamentos cardiovasculares">
+          </div>
+          <div class="gallery-item fade-in gallery-item--big">
+            <img src="https://images.unsplash.com/photo-1558611848-73f7eb4001a1?q=80&w=900&auto=format&fit=crop" alt="Vista geral da academia PowerFit">
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================================================== -->
+    <!-- FAQ                                                    -->
+    <!-- ===================================================== -->
+    <section class="section section--alt" id="faq">
+      <div class="container container--narrow">
+        <div class="section__header fade-in">
+          <p class="eyebrow">Dúvidas frequentes</p>
+          <h2 class="section__title">Perguntas <span class="text-purple">e respostas</span></h2>
+        </div>
+
+        <div class="accordion" id="accordion">
+
+          <div class="accordion-item fade-in">
+            <button class="accordion-item__header">
+              <span>Como funciona a aula experimental gratuita?</span>
+              <i class="ph-bold ph-plus accordion-item__icon"></i>
+            </button>
+            <div class="accordion-item__body">
+              <p>Você agenda pelo site ou WhatsApp, escolhe o melhor horário e recebe um tour completo
+              pela estrutura, além de treinar com acompanhamento de um trainer, sem nenhum custo.</p>
+            </div>
+          </div>
+
+          <div class="accordion-item fade-in">
+            <button class="accordion-item__header">
+              <span>Existe taxa de matrícula?</span>
+              <i class="ph-bold ph-plus accordion-item__icon"></i>
+            </button>
+            <div class="accordion-item__body">
+              <p>Não. Na PowerFit você paga apenas a mensalidade do plano escolhido, sem taxas
+              escondidas ou surpresas no contrato.</p>
+            </div>
+          </div>
+
+          <div class="accordion-item fade-in">
+            <button class="accordion-item__header">
+              <span>Posso cancelar ou trocar de plano quando quiser?</span>
+              <i class="ph-bold ph-plus accordion-item__icon"></i>
+            </button>
+            <div class="accordion-item__body">
+              <p>Sim. Você pode fazer upgrade, downgrade ou cancelamento a qualquer momento direto
+              pelo app, sem burocracia e sem multa de fidelidade.</p>
+            </div>
+          </div>
+
+          <div class="accordion-item fade-in">
+            <button class="accordion-item__header">
+              <span>A academia oferece estacionamento?</span>
+              <i class="ph-bold ph-plus accordion-item__icon"></i>
+            </button>
+            <div class="accordion-item__body">
+              <p>Sim, contamos com estacionamento próprio gratuito para alunos durante todo o
+              período de uso da academia.</p>
+            </div>
+          </div>
+
+          <div class="accordion-item fade-in">
+            <button class="accordion-item__header">
+              <span>Tem armário e vestiário com chuveiro?</span>
+              <i class="ph-bold ph-plus accordion-item__icon"></i>
+            </button>
+            <div class="accordion-item__body">
+              <p>Sim. Nossos vestiários contam com armários individuais, chuveiros quentes e
+              produtos de higiene disponíveis para todos os alunos.</p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================================================== -->
+    <!-- LOCALIZAÇÃO + CONTATO                                  -->
+    <!-- ===================================================== -->
+    <section class="section" id="localizacao">
+      <div class="container">
+        <div class="section__header fade-in">
+          <p class="eyebrow">Localização</p>
+          <h2 class="section__title">Venha treinar<br><span class="text-purple">pessoalmente</span></h2>
+        </div>
+
+        <div class="location-grid">
+
+          <!-- Mapa -->
+          <div class="location-map fade-in">
+            <iframe
+              title="Mapa de localização da PowerFit"
+              src="https://www.openstreetmap.org/export/embed.html?bbox=-46.6620%2C-23.5650%2C-46.6420%2C-23.5500&layer=mapnik"
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade">
+            </iframe>
+          </div>
+
+          <!-- Informações + formulário -->
+          <div class="location-info fade-in" id="contato">
+            <div class="location-info__item">
+              <i class="ph-bold ph-map-pin"></i>
+              <div>
+                <strong>Endereço</strong>
+                <p>Av. Paulista, 1000 — Bela Vista, São Paulo - SP</p>
+              </div>
+            </div>
+            <div class="location-info__item">
+              <i class="ph-bold ph-clock"></i>
+              <div>
+                <strong>Horário</strong>
+                <p>Aberta 24 horas, todos os dias da semana</p>
+              </div>
+            </div>
+            <div class="location-info__item">
+              <i class="ph-bold ph-phone"></i>
+              <div>
+                <strong>Contato</strong>
+                <p>(11) 9 9999-0000</p>
+              </div>
+            </div>
+
+            <!-- Formulário de agendamento -->
+            <form class="contact-form" id="contactForm">
+              <h3>Agende sua aula experimental</h3>
+              <div class="contact-form__row">
+                <input type="text" name="nome" placeholder="Seu nome" required />
+                <input type="tel" name="telefone" placeholder="WhatsApp" required />
+              </div>
+              <input type="email" name="email" placeholder="Seu e-mail" required />
+              <button type="submit" class="btn btn--primary btn--full">
+                <i class="ph-bold ph-calendar-check"></i>
+                Confirmar Agendamento
+              </button>
+              <p class="contact-form__feedback" id="formFeedback" aria-live="polite"></p>
+            </form>
+          </div>
+
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ===================================================== -->
+  <!-- RODAPÉ                                                 -->
+  <!-- ===================================================== -->
+  <footer class="footer">
+    <div class="container footer__inner">
+
+      <div class="footer__brand">
+        <span class="footer__logo">POWER<span class="text-purple">FIT</span></span>
+        <p>Treine forte. Viva mais. A academia que transforma disciplina em resultado.</p>
+        <div class="footer__social">
+          <a href="#" aria-label="Instagram"><i class="ph-bold ph-instagram-logo"></i></a>
+          <a href="#" aria-label="Facebook"><i class="ph-bold ph-facebook-logo"></i></a>
+          <a href="#" aria-label="TikTok"><i class="ph-bold ph-tiktok-logo"></i></a>
+          <a href="#" aria-label="WhatsApp"><i class="ph-bold ph-whatsapp-logo"></i></a>
+        </div>
+      </div>
+
+      <div class="footer__col">
+        <h4>Navegação</h4>
+        <a href="#beneficios">Benefícios</a>
+        <a href="#planos">Planos</a>
+        <a href="#trainers">Trainers</a>
+        <a href="#galeria">Galeria</a>
+      </div>
+
+      <div class="footer__col">
+        <h4>Institucional</h4>
+        <a href="#faq">FAQ</a>
+        <a href="#localizacao">Localização</a>
+        <a href="#">Termos de Uso</a>
+        <a href="#">Privacidade</a>
+      </div>
+
+      <div class="footer__col">
+        <h4>Contato</h4>
+        <a href="tel:+5511999990000">(11) 9 9999-0000</a>
+        <a href="mailto:contato@powerfit.com.br">contato@powerfit.com.br</a>
+        <a href="#localizacao">Av. Paulista, 1000 — SP</a>
+      </div>
+
+    </div>
+
+    <div class="footer__bottom">
+      <p>&copy; <span id="currentYear"></span> PowerFit. Todos os direitos reservados.</p>
+    </div>
+  </footer>
+
+  <!-- ===================================================== -->
+  <!-- BOTÃO VOLTAR AO TOPO                                   -->
+  <!-- ===================================================== -->
+  <button id="backToTop" class="back-to-top" aria-label="Voltar ao topo">
+    <i class="ph-bold ph-arrow-up"></i>
+  </button>
+
+  <!-- ============ JAVASCRIPT PRÓPRIO ============ -->
+  <script src="script.js"></script>
+</body>
+</html>
