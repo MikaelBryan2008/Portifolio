@@ -1,0 +1,716 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Bella Massa — Cucina Italiana</title>
+  <meta name="description" content="Bella Massa — Restaurante italiano autêntico. Massas frescas, vinhos selecionados e a tradição italiana em cada prato." />
+
+  <!-- Google Fonts: Fraunces (display, com personalidade italiana) + Manrope (corpo, moderna e legível) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,400;1,9..144,500&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- ===== PRELOADER ===== -->
+  <!-- Tela de carregamento inicial com o monograma da marca; é escondida via JS após o load -->
+  <div class="preloader" id="preloader" aria-hidden="true">
+    <div class="preloader__mark">
+      <span>B</span><span>M</span>
+    </div>
+  </div>
+
+  <!-- ===== NAVBAR FIXA ===== -->
+  <header class="navbar" id="navbar">
+    <nav class="navbar__inner">
+      <a href="#topo" class="navbar__logo" aria-label="Bella Massa - Página inicial">
+        <span class="navbar__logo-mark">BM</span>
+        <span class="navbar__logo-text">Bella&nbsp;Massa</span>
+      </a>
+
+      <ul class="navbar__links" id="navLinks">
+        <li><a href="#historia">História</a></li>
+        <li><a href="#cardapio">Cardápio</a></li>
+        <li><a href="#destaques">Destaques</a></li>
+        <li><a href="#galeria">Galeria</a></li>
+        <li><a href="#avaliacoes">Avaliações</a></li>
+        <li><a href="#contato">Localização</a></li>
+      </ul>
+
+      <a href="#reserva" class="navbar__cta">Reservar mesa</a>
+
+      <button class="navbar__burger" id="burgerBtn" aria-label="Abrir menu de navegação" aria-expanded="false" aria-controls="mobileDrawer">
+        <span></span><span></span><span></span>
+      </button>
+    </nav>
+  </header>
+
+  <!-- ===== DRAWER MOBILE ===== -->
+  <div class="drawer" id="mobileDrawer" aria-hidden="true">
+    <ul class="drawer__links">
+      <li><a href="#historia">História</a></li>
+      <li><a href="#cardapio">Cardápio</a></li>
+      <li><a href="#destaques">Pratos em Destaque</a></li>
+      <li><a href="#galeria">Galeria</a></li>
+      <li><a href="#avaliacoes">Avaliações</a></li>
+      <li><a href="#horario">Horário</a></li>
+      <li><a href="#contato">Localização</a></li>
+    </ul>
+    <a href="#reserva" class="drawer__cta">Reservar mesa</a>
+  </div>
+  <div class="drawer__backdrop" id="drawerBackdrop"></div>
+
+  <!-- ===== HERO ===== -->
+  <section class="hero" id="topo">
+    <div class="hero__media">
+      <img
+        src="https://images.unsplash.com/photo-1414235077428-338989a2e8c0?auto=format&fit=crop&w=1920&q=80"
+        alt="Mesa posta em restaurante italiano com velas e massa fresca"
+        class="hero__img"
+      />
+      <div class="hero__overlay"></div>
+    </div>
+
+    <div class="hero__content">
+      <p class="eyebrow hero__eyebrow" data-reveal>Trattoria · Dal 1987</p>
+      <h1 class="hero__title" data-reveal>
+        A tradição<br />
+        <em>italiana</em> em<br />
+        cada garfada.
+      </h1>
+      <p class="hero__subtitle" data-reveal>
+        Massas artesanais, receitas de família e uma adega cuidadosamente
+        selecionada — no coração da cidade, com a alma da Itália.
+      </p>
+      <div class="hero__actions" data-reveal>
+        <a href="#reserva" class="btn btn--primary">Reservar uma mesa</a>
+        <a href="#cardapio" class="btn btn--ghost">Ver cardápio</a>
+      </div>
+    </div>
+
+    <a href="#historia" class="hero__scroll" aria-label="Rolar para a próxima seção">
+      <span></span>
+    </a>
+  </section>
+
+  <!-- ===== HISTÓRIA ===== -->
+  <section class="historia" id="historia">
+    <div class="container historia__grid">
+      <div class="historia__media" data-reveal>
+        <img
+          src="https://images.unsplash.com/photo-1556910103-1c02745aae4d?auto=format&fit=crop&w=1000&q=80"
+          alt="Chef italiano preparando massa fresca à mão"
+          loading="lazy"
+        />
+        <div class="historia__media-frame" aria-hidden="true"></div>
+      </div>
+
+      <div class="historia__text">
+        <p class="eyebrow" data-reveal>Nossa história</p>
+        <h2 class="section-title" data-reveal>Da cozinha da nonna<br />para a sua mesa.</h2>
+        <p class="historia__paragraph" data-reveal>
+          Em 1987, Giulia Romano trouxe da Campania apenas duas coisas: uma
+          maleta de madeira com utensílios da família e um caderno de receitas
+          escrito à mão por sua mãe. O Bella Massa nasceu numa esquina
+          pequena, com quatro mesas e um forno a lenha.
+        </p>
+        <p class="historia__paragraph" data-reveal>
+          Quase quatro décadas depois, o segredo continua o mesmo: massa
+          fresca feita todos os dias, tomates que respiram sol italiano e o
+          respeito por um prato que carrega memória, não apenas sabor. Hoje, a
+          terceira geração da família está na cozinha — e o forno a lenha
+          continua o mesmo.
+        </p>
+
+        <div class="historia__stats" data-reveal>
+          <div class="historia__stat">
+            <span class="historia__stat-number" data-counter data-target="37">0</span>
+            <span class="historia__stat-label">Anos de tradição</span>
+          </div>
+          <div class="historia__stat">
+            <span class="historia__stat-number" data-counter data-target="48">0</span>
+            <span class="historia__stat-label">Receitas de família</span>
+          </div>
+          <div class="historia__stat">
+            <span class="historia__stat-number" data-counter data-target="3">0</span>
+            <span class="historia__stat-label">Gerações na cozinha</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== CARDÁPIO ===== -->
+  <section class="cardapio" id="cardapio">
+    <div class="container">
+      <div class="section-head">
+        <p class="eyebrow" data-reveal>Il Menu</p>
+        <h2 class="section-title" data-reveal>Nosso cardápio</h2>
+        <p class="section-subtitle" data-reveal>
+          Cada categoria carrega uma parte diferente da Itália — escolha sua
+          jornada.
+        </p>
+      </div>
+
+      <!-- Abas do cardápio -->
+      <div class="menu-tabs" role="tablist" aria-label="Categorias do cardápio" data-reveal>
+        <button class="menu-tab is-active" role="tab" aria-selected="true" data-tab="entradas">Entradas</button>
+        <button class="menu-tab" role="tab" aria-selected="false" data-tab="massas">Massas</button>
+        <button class="menu-tab" role="tab" aria-selected="false" data-tab="carnes">Carnes &amp; Peixes</button>
+        <button class="menu-tab" role="tab" aria-selected="false" data-tab="vinhos">Vinhos</button>
+        <button class="menu-tab" role="tab" aria-selected="false" data-tab="doces">Doces</button>
+      </div>
+
+      <!-- Painel: Entradas -->
+      <div class="menu-panel is-active" id="panel-entradas" role="tabpanel">
+        <ul class="menu-list">
+          <li class="menu-item" data-reveal>
+            <span class="menu-item__num">I</span>
+            <div class="menu-item__body">
+              <div class="menu-item__top">
+                <h3>Burrata al Tartufo</h3>
+                <span class="menu-item__price">R$ 58</span>
+              </div>
+              <p>Burrata cremosa, lascas de trufa negra, mel de flor de
+                laranjeira e torrada rústica.</p>
+            </div>
+          </li>
+          <li class="menu-item" data-reveal>
+            <span class="menu-item__num">II</span>
+            <div class="menu-item__body">
+              <div class="menu-item__top">
+                <h3>Carpaccio di Manzo</h3>
+                <span class="menu-item__price">R$ 49</span>
+              </div>
+              <p>Finas lâminas de filé mignon, alcaparras, rúcula selvagem e
+                lascas de parmesão envelhecido 24 meses.</p>
+            </div>
+          </li>
+          <li class="menu-item" data-reveal>
+            <span class="menu-item__num">III</span>
+            <div class="menu-item__body">
+              <div class="menu-item__top">
+                <h3>Bruschette Toscane</h3>
+                <span class="menu-item__price">R$ 34</span>
+              </div>
+              <p>Pão rústico grelhado, tomate confit, manjericão fresco e
+                azeite extra virgem da Úmbria.</p>
+            </div>
+          </li>
+        </ul>
+      </div>
+
+      <!-- Painel: Massas -->
+      <div class="menu-panel" id="panel-massas" role="tabpanel" hidden>
+        <ul class="menu-list">
+          <li class="menu-item" data-reveal>
+            <span class="menu-item__num">I</span>
+            <div class="menu-item__body">
+              <div class="menu-item__top">
+                <h3>Tagliatelle al Tartufo Nero</h3>
+                <span class="menu-item__price">R$ 89</span>
+              </div>
+              <p>Massa fresca, manteiga de trufas, parmesão e trufa negra
+                ralada à mesa.</p>
+            </div>
+          </li>
+          <li class="menu-item" data-reveal>
+            <span class="menu-item__num">II</span>
+            <div class="menu-item__body">
+              <div class="menu-item__top">
+                <h3>Risotto ai Frutti di Mare</h3>
+                <span class="menu-item__price">R$ 94</span>
+              </div>
+              <p>Arroz carnaroli, camarões, lula e mexilhões, finalizado com
+                açafrão e raspas de limão siciliano.</p>
+            </div>
+          </li>
+          <li class="menu-item" data-reveal>
+            <span class="menu-item__num">III</span>
+            <div class="menu-item__body">
+              <div class="menu-item__top">
+                <h3>Ravioli di Zucca</h3>
+                <span class="menu-item__price">R$ 72</span>
+              </div>
+              <p>Ravióli artesanal de abóbora, manteiga sálvia, amêndoas
+                tostadas e parmesão.</p>
+            </div>
+          </li>
+          <li class="menu-item" data-reveal>
+            <span class="menu-item__num">IV</span>
+            <div class="menu-item__body">
+              <div class="menu-item__top">
+                <h3>Spaghetti alla Bella Massa</h3>
+                <span class="menu-item__price">R$ 68</span>
+              </div>
+              <p>Nossa assinatura: tomate San Marzano, manjericão e azeite
+                de oliva extra virgem prensado a frio.</p>
+            </div>
+          </li>
+        </ul>
+      </div>
+
+      <!-- Painel: Carnes & Peixes -->
+      <div class="menu-panel" id="panel-carnes" role="tabpanel" hidden>
+        <ul class="menu-list">
+          <li class="menu-item" data-reveal>
+            <span class="menu-item__num">I</span>
+            <div class="menu-item__body">
+              <div class="menu-item__top">
+                <h3>Osso Buco alla Milanese</h3>
+                <span class="menu-item__price">R$ 112</span>
+              </div>
+              <p>Jarrete de vitela braseado lentamente, risoto de açafrão e
+                gremolata fresca.</p>
+            </div>
+          </li>
+          <li class="menu-item" data-reveal>
+            <span class="menu-item__num">II</span>
+            <div class="menu-item__body">
+              <div class="menu-item__top">
+                <h3>Branzino al Forno</h3>
+                <span class="menu-item__price">R$ 98</span>
+              </div>
+              <p>Robalo inteiro assado, ervas mediterrâneas, limão e
+                legumes da estação.</p>
+            </div>
+          </li>
+          <li class="menu-item" data-reveal>
+            <span class="menu-item__num">III</span>
+            <div class="menu-item__body">
+              <div class="menu-item__top">
+                <h3>Tagliata di Manzo</h3>
+                <span class="menu-item__price">R$ 119</span>
+              </div>
+              <p>Contra-filé grelhado, rúcula, tomate cereja e lascas de
+                parmesão envelhecido.</p>
+            </div>
+          </li>
+        </ul>
+      </div>
+
+      <!-- Painel: Vinhos -->
+      <div class="menu-panel" id="panel-vinhos" role="tabpanel" hidden>
+        <ul class="menu-list">
+          <li class="menu-item" data-reveal>
+            <span class="menu-item__num">I</span>
+            <div class="menu-item__body">
+              <div class="menu-item__top">
+                <h3>Barolo DOCG, Piemonte</h3>
+                <span class="menu-item__price">R$ 320</span>
+              </div>
+              <p>Corpo intenso, taninos firmes e notas de cereja madura —
+                o rei dos vinhos do Piemonte.</p>
+            </div>
+          </li>
+          <li class="menu-item" data-reveal>
+            <span class="menu-item__num">II</span>
+            <div class="menu-item__body">
+              <div class="menu-item__top">
+                <h3>Chianti Classico Riserva</h3>
+                <span class="menu-item__price">R$ 210</span>
+              </div>
+              <p>Toscano clássico, equilibrado, com notas de ameixa e
+                especiarias suaves.</p>
+            </div>
+          </li>
+          <li class="menu-item" data-reveal>
+            <span class="menu-item__num">III</span>
+            <div class="menu-item__body">
+              <div class="menu-item__top">
+                <h3>Vermentino di Sardegna</h3>
+                <span class="menu-item__price">R$ 165</span>
+              </div>
+              <p>Branco fresco e mineral, perfeito para acompanhar frutos
+                do mar.</p>
+            </div>
+          </li>
+        </ul>
+      </div>
+
+      <!-- Painel: Doces -->
+      <div class="menu-panel" id="panel-doces" role="tabpanel" hidden>
+        <ul class="menu-list">
+          <li class="menu-item" data-reveal>
+            <span class="menu-item__num">I</span>
+            <div class="menu-item__body">
+              <div class="menu-item__top">
+                <h3>Tiramisù della Nonna</h3>
+                <span class="menu-item__price">R$ 38</span>
+              </div>
+              <p>Receita original de 1987, café espresso, mascarpone e cacau
+                amargo.</p>
+            </div>
+          </li>
+          <li class="menu-item" data-reveal>
+            <span class="menu-item__num">II</span>
+            <div class="menu-item__body">
+              <div class="menu-item__top">
+                <h3>Panna Cotta ai Frutti Rossi</h3>
+                <span class="menu-item__price">R$ 32</span>
+              </div>
+              <p>Creme italiano macio, calda de frutas vermelhas frescas.</p>
+            </div>
+          </li>
+          <li class="menu-item" data-reveal>
+            <span class="menu-item__num">III</span>
+            <div class="menu-item__body">
+              <div class="menu-item__top">
+                <h3>Cannoli Siciliani</h3>
+                <span class="menu-item__price">R$ 29</span>
+              </div>
+              <p>Massa crocante, recheio de ricota fresca e pistache
+                triturado.</p>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== PRATOS EM DESTAQUE ===== -->
+  <section class="destaques" id="destaques">
+    <div class="container">
+      <div class="section-head">
+        <p class="eyebrow" data-reveal>Especialidades da casa</p>
+        <h2 class="section-title" data-reveal>Pratos em destaque</h2>
+        <p class="section-subtitle" data-reveal>
+          As receitas que definem o Bella Massa — escolhidas por quem volta
+          sempre.
+        </p>
+      </div>
+
+      <div class="dish-grid">
+        <article class="dish-card" data-reveal>
+          <div class="dish-card__img">
+            <img src="https://images.unsplash.com/photo-1611270629569-8b357cb88da9?auto=format&fit=crop&w=800&q=80" alt="Tagliatelle ao tartufo negro" loading="lazy" />
+            <span class="dish-card__badge">Assinatura</span>
+          </div>
+          <div class="dish-card__body">
+            <h3>Tagliatelle al Tartufo Nero</h3>
+            <p>Massa fresca artesanal com manteiga de trufas e parmesão
+              envelhecido.</p>
+            <span class="dish-card__price">R$ 89</span>
+          </div>
+        </article>
+
+        <article class="dish-card" data-reveal>
+          <div class="dish-card__img">
+            <img src="https://images.unsplash.com/photo-1544025162-d76694265947?auto=format&fit=crop&w=800&q=80" alt="Risotto de frutos do mar" loading="lazy" />
+            <span class="dish-card__badge">Favorito</span>
+          </div>
+          <div class="dish-card__body">
+            <h3>Risotto ai Frutti di Mare</h3>
+            <p>Arroz carnaroli cremoso com camarões, lula e açafrão.</p>
+            <span class="dish-card__price">R$ 94</span>
+          </div>
+        </article>
+
+        <article class="dish-card" data-reveal>
+          <div class="dish-card__img">
+            <img src="https://images.unsplash.com/photo-1551183053-bf91a1d81141?auto=format&fit=crop&w=800&q=80" alt="Osso buco à milanesa" loading="lazy" />
+            <span class="dish-card__badge">Clássico</span>
+          </div>
+          <div class="dish-card__body">
+            <h3>Osso Buco alla Milanese</h3>
+            <p>Jarrete de vitela braseado lentamente com risoto de açafrão.</p>
+            <span class="dish-card__price">R$ 112</span>
+          </div>
+        </article>
+
+        <article class="dish-card" data-reveal>
+          <div class="dish-card__img">
+            <img src="https://images.unsplash.com/photo-1571877227200-a0d98ea607e9?auto=format&fit=crop&w=800&q=80" alt="Tiramisù tradicional" loading="lazy" />
+            <span class="dish-card__badge">Doce da casa</span>
+          </div>
+          <div class="dish-card__body">
+            <h3>Tiramisù della Nonna</h3>
+            <p>A receita original de 1987 — café, mascarpone e cacau amargo.</p>
+            <span class="dish-card__price">R$ 38</span>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== GALERIA ===== -->
+  <section class="galeria" id="galeria">
+    <div class="container">
+      <div class="section-head">
+        <p class="eyebrow" data-reveal>Atmosfera</p>
+        <h2 class="section-title" data-reveal>Galeria</h2>
+        <p class="section-subtitle" data-reveal>
+          Um pouco do ambiente, dos pratos e dos detalhes que fazem o Bella
+          Massa.
+        </p>
+      </div>
+
+      <div class="gallery-grid">
+        <button class="gallery-item gallery-item--tall" data-reveal data-full="https://images.unsplash.com/photo-1466978913421-dad2ebd01d17?auto=format&fit=crop&w=1200&q=85">
+          <img src="https://images.unsplash.com/photo-1466978913421-dad2ebd01d17?auto=format&fit=crop&w=700&q=80" alt="Salão interno do restaurante" loading="lazy" />
+        </button>
+        <button class="gallery-item" data-reveal data-full="https://images.unsplash.com/photo-1498654200943-1088dd4438ae?auto=format&fit=crop&w=1200&q=85">
+          <img src="https://images.unsplash.com/photo-1498654200943-1088dd4438ae?auto=format&fit=crop&w=700&q=80" alt="Massa fresca sendo preparada" loading="lazy" />
+        </button>
+        <button class="gallery-item" data-reveal data-full="https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?auto=format&fit=crop&w=1200&q=85">
+          <img src="https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?auto=format&fit=crop&w=700&q=80" alt="Prato de massa com manjericão" loading="lazy" />
+        </button>
+        <button class="gallery-item gallery-item--wide" data-reveal data-full="https://images.unsplash.com/photo-1414235077428-338989a2e8c0?auto=format&fit=crop&w=1400&q=85">
+          <img src="https://images.unsplash.com/photo-1414235077428-338989a2e8c0?auto=format&fit=crop&w=900&q=80" alt="Mesa posta com velas" loading="lazy" />
+        </button>
+        <button class="gallery-item" data-reveal data-full="https://images.unsplash.com/photo-1432139509613-5c4255815697?auto=format&fit=crop&w=1200&q=85">
+          <img src="https://images.unsplash.com/photo-1432139509613-5c4255815697?auto=format&fit=crop&w=700&q=80" alt="Detalhe de taça de vinho italiano" loading="lazy" />
+        </button>
+        <button class="gallery-item" data-reveal data-full="https://images.unsplash.com/photo-1555396273-367ea4eb4db5?auto=format&fit=crop&w=1200&q=85">
+          <img src="https://images.unsplash.com/photo-1555396273-367ea4eb4db5?auto=format&fit=crop&w=700&q=80" alt="Sobremesa tiramisù" loading="lazy" />
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Lightbox da galeria -->
+  <div class="lightbox" id="lightbox" aria-hidden="true">
+    <button class="lightbox__close" id="lightboxClose" aria-label="Fechar imagem">&times;</button>
+    <img src="" alt="" id="lightboxImg" />
+  </div>
+
+  <!-- ===== RESERVA ===== -->
+  <section class="reserva" id="reserva">
+    <div class="container reserva__grid">
+      <div class="reserva__info">
+        <p class="eyebrow" data-reveal>Sua mesa espera</p>
+        <h2 class="section-title" data-reveal>Reserve sua experiência</h2>
+        <p class="section-subtitle" data-reveal>
+          Preencha o formulário e nossa equipe confirma sua reserva em até
+          2 horas. Para grupos acima de 8 pessoas, fale direto com a gente
+          pelo WhatsApp.
+        </p>
+
+        <ul class="reserva__perks" data-reveal>
+          <li>Mesas internas e área externa com jardim</li>
+          <li>Adega com mais de 120 rótulos italianos</li>
+          <li>Ambiente climatizado e acessível</li>
+        </ul>
+      </div>
+
+      <form class="reserva__form" id="reservaForm" data-reveal novalidate>
+        <div class="form-row">
+          <div class="form-field">
+            <label for="nome">Nome completo</label>
+            <input type="text" id="nome" name="nome" placeholder="Seu nome" required />
+          </div>
+          <div class="form-field">
+            <label for="telefone">Telefone</label>
+            <input type="tel" id="telefone" name="telefone" placeholder="(11) 99999-9999" required />
+          </div>
+        </div>
+
+        <div class="form-row">
+          <div class="form-field">
+            <label for="data">Data</label>
+            <input type="date" id="data" name="data" required />
+          </div>
+          <div class="form-field">
+            <label for="hora">Horário</label>
+            <select id="hora" name="hora" required>
+              <option value="" disabled selected>Selecione</option>
+              <option>19:00</option>
+              <option>19:30</option>
+              <option>20:00</option>
+              <option>20:30</option>
+              <option>21:00</option>
+              <option>21:30</option>
+              <option>22:00</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="form-row">
+          <div class="form-field">
+            <label for="pessoas">Número de pessoas</label>
+            <select id="pessoas" name="pessoas" required>
+              <option value="" disabled selected>Selecione</option>
+              <option>1 pessoa</option>
+              <option>2 pessoas</option>
+              <option>3 pessoas</option>
+              <option>4 pessoas</option>
+              <option>5 pessoas</option>
+              <option>6 pessoas</option>
+              <option>7 ou mais (consultar)</option>
+            </select>
+          </div>
+          <div class="form-field">
+            <label for="ocasiao">Ocasião (opcional)</label>
+            <input type="text" id="ocasiao" name="ocasiao" placeholder="Aniversário, jantar romântico..." />
+          </div>
+        </div>
+
+        <div class="form-field">
+          <label for="observacoes">Observações</label>
+          <textarea id="observacoes" name="observacoes" rows="3" placeholder="Restrições alimentares, preferência de mesa, etc."></textarea>
+        </div>
+
+        <button type="submit" class="btn btn--primary btn--block">Confirmar reserva</button>
+
+        <p class="reserva__feedback" id="reservaFeedback" role="status" aria-live="polite"></p>
+      </form>
+    </div>
+  </section>
+
+  <!-- ===== AVALIAÇÕES ===== -->
+  <section class="avaliacoes" id="avaliacoes">
+    <div class="container">
+      <div class="section-head">
+        <p class="eyebrow" data-reveal>O que dizem sobre nós</p>
+        <h2 class="section-title" data-reveal>Avaliações</h2>
+      </div>
+
+      <div class="reviews-track-wrap" data-reveal>
+        <div class="reviews-track">
+          <article class="review-card">
+            <div class="review-card__stars" aria-label="5 de 5 estrelas">★★★★★</div>
+            <p class="review-card__text">"O tagliatelle ao tartufo é simplesmente inesquecível. Atendimento impecável e ambiente acolhedor — voltamos sempre que podemos."</p>
+            <div class="review-card__author">
+              <span class="review-card__name">Marina Costa</span>
+              <span class="review-card__meta">Google Reviews</span>
+            </div>
+          </article>
+
+          <article class="review-card">
+            <div class="review-card__stars" aria-label="5 de 5 estrelas">★★★★★</div>
+            <p class="review-card__text">"Comemoramos nosso aniversário de casamento ali. A carta de vinhos é excelente e o osso buco é de outro nível. Recomendo de olhos fechados."</p>
+            <div class="review-card__author">
+              <span class="review-card__name">Rafael Andrade</span>
+              <span class="review-card__meta">TripAdvisor</span>
+            </div>
+          </article>
+
+          <article class="review-card">
+            <div class="review-card__stars" aria-label="5 de 5 estrelas">★★★★★</div>
+            <p class="review-card__text">"Lugar com alma de verdade. Sinto que estou na Itália a cada visita. O tiramisù é o melhor que já comi fora da Europa."</p>
+            <div class="review-card__author">
+              <span class="review-card__name">Bianca Ferreira</span>
+              <span class="review-card__meta">Google Reviews</span>
+            </div>
+          </article>
+
+          <article class="review-card">
+            <div class="review-card__stars" aria-label="5 de 5 estrelas">★★★★★</div>
+            <p class="review-card__text">"Atendimento atencioso, pratos generosos e um ambiente lindo para uma noite especial. O Bella Massa é parada obrigatória."</p>
+            <div class="review-card__author">
+              <span class="review-card__name">Eduardo Lima</span>
+              <span class="review-card__meta">TripAdvisor</span>
+            </div>
+          </article>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== HORÁRIO + LOCALIZAÇÃO ===== -->
+  <section class="info" id="contato">
+    <div class="container info__grid">
+      <div class="info__block" id="horario" data-reveal>
+        <p class="eyebrow">Horário de funcionamento</p>
+        <h2 class="section-title">Quando estamos<br />de portas abertas</h2>
+
+        <ul class="schedule-list">
+          <li><span>Segunda-feira</span><span>Fechado</span></li>
+          <li><span>Terça a Quinta</span><span>18h00 — 23h00</span></li>
+          <li><span>Sexta e Sábado</span><span>18h00 — 00h00</span></li>
+          <li><span>Domingo</span><span>12h00 — 16h00</span></li>
+        </ul>
+
+        <p class="info__note">Reservas recomendadas às quintas, sextas e
+          sábados.</p>
+      </div>
+
+      <div class="info__block" data-reveal>
+        <p class="eyebrow">Localização</p>
+        <h2 class="section-title">Onde nos<br />encontrar</h2>
+
+        <address class="info__address">
+          Rua dei Sapori, 245 — Jardim Itália<br />
+          São Paulo, SP — 01234-567
+        </address>
+
+        <div class="map-frame">
+          <iframe
+            title="Mapa de localização do Bella Massa"
+            src="https://www.google.com/maps?q=São+Paulo,+SP&output=embed"
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade">
+          </iframe>
+        </div>
+
+        <a href="https://wa.me/5511999998888?text=Ol%C3%A1!%20Gostaria%20de%20fazer%20uma%20reserva%20no%20Bella%20Massa." target="_blank" rel="noopener" class="btn btn--whatsapp">
+          <svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><path fill="currentColor" d="M17.6 6.32A8.86 8.86 0 0 0 12.05 3.5a8.86 8.86 0 0 0-7.66 13.36L3 21l4.27-1.36a8.8 8.8 0 0 0 4.78 1.4h.01a8.86 8.86 0 0 0 6.27-15.07ZM12.06 19.7a7.4 7.4 0 0 1-3.77-1.04l-.27-.16-2.81.9.9-2.74-.18-.28a7.41 7.41 0 0 1 11.6-9.04 7.34 7.34 0 0 1 2.17 5.22 7.41 7.41 0 0 1-7.64 7.04Zm4.05-5.52c-.22-.11-1.3-.64-1.5-.71-.2-.08-.35-.11-.5.11-.15.22-.57.71-.7.86-.13.14-.26.16-.48.05a5.93 5.93 0 0 1-2.96-2.6c-.22-.38.22-.36.63-1.18.07-.14.04-.26-.02-.37-.07-.11-.5-1.2-.68-1.65-.18-.43-.36-.37-.5-.38h-.43a.83.83 0 0 0-.6.28 2.53 2.53 0 0 0-.79 1.88c0 1.11.81 2.18.92 2.33.11.15 1.57 2.4 3.8 3.27 1.89.74 2.27.6 2.68.56.41-.04 1.3-.53 1.49-1.04.18-.51.18-.95.13-1.04-.06-.1-.2-.16-.49-.27Z"/></svg>
+          Falar no WhatsApp
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== RODAPÉ ===== -->
+  <footer class="footer">
+    <div class="container footer__grid">
+      <div class="footer__brand">
+        <a href="#topo" class="navbar__logo">
+          <span class="navbar__logo-mark">BM</span>
+          <span class="navbar__logo-text">Bella&nbsp;Massa</span>
+        </a>
+        <p>Cucina italiana autêntica desde 1987. Massa fresca, vinho bom e
+          a mesa sempre posta para você.</p>
+      </div>
+
+      <div class="footer__col">
+        <h4>Navegação</h4>
+        <ul>
+          <li><a href="#historia">História</a></li>
+          <li><a href="#cardapio">Cardápio</a></li>
+          <li><a href="#galeria">Galeria</a></li>
+          <li><a href="#reserva">Reservas</a></li>
+        </ul>
+      </div>
+
+      <div class="footer__col">
+        <h4>Contato</h4>
+        <ul>
+          <li>Rua dei Sapori, 245 — Jardim Itália, SP</li>
+          <li>(11) 99999-8888</li>
+          <li>contato@bellamassa.com.br</li>
+        </ul>
+      </div>
+
+      <div class="footer__col">
+        <h4>Redes sociais</h4>
+        <div class="footer__social">
+          <a href="#" aria-label="Instagram do Bella Massa">Instagram</a>
+          <a href="#" aria-label="Facebook do Bella Massa">Facebook</a>
+          <a href="https://wa.me/5511999998888" target="_blank" rel="noopener" aria-label="WhatsApp do Bella Massa">WhatsApp</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer__bottom container">
+      <p>&copy; <span id="anoAtual"></span> Bella Massa. Todos os direitos reservados.</p>
+      <p>Feito com cura, como uma boa massa.</p>
+    </div>
+  </footer>
+
+  <!-- Botão flutuante do WhatsApp -->
+  <a href="https://wa.me/5511999998888?text=Ol%C3%A1!%20Gostaria%20de%20fazer%20uma%20reserva%20no%20Bella%20Massa." target="_blank" rel="noopener" class="whatsapp-float" aria-label="Fale com a gente pelo WhatsApp">
+    <svg viewBox="0 0 24 24" width="28" height="28" aria-hidden="true"><path fill="currentColor" d="M17.6 6.32A8.86 8.86 0 0 0 12.05 3.5a8.86 8.86 0 0 0-7.66 13.36L3 21l4.27-1.36a8.8 8.8 0 0 0 4.78 1.4h.01a8.86 8.86 0 0 0 6.27-15.07ZM12.06 19.7a7.4 7.4 0 0 1-3.77-1.04l-.27-.16-2.81.9.9-2.74-.18-.28a7.41 7.41 0 0 1 11.6-9.04 7.34 7.34 0 0 1 2.17 5.22 7.41 7.41 0 0 1-7.64 7.04Zm4.05-5.52c-.22-.11-1.3-.64-1.5-.71-.2-.08-.35-.11-.5.11-.15.22-.57.71-.7.86-.13.14-.26.16-.48.05a5.93 5.93 0 0 1-2.96-2.6c-.22-.38.22-.36.63-1.18.07-.14.04-.26-.02-.37-.07-.11-.5-1.2-.68-1.65-.18-.43-.36-.37-.5-.38h-.43a.83.83 0 0 0-.6.28 2.53 2.53 0 0 0-.79 1.88c0 1.11.81 2.18.92 2.33.11.15 1.57 2.4 3.8 3.27 1.89.74 2.27.6 2.68.56.41-.04 1.3-.53 1.49-1.04.18-.51.18-.95.13-1.04-.06-.1-.2-.16-.49-.27Z"/></svg>
+  </a>
+
+  <!-- Botão "voltar ao topo" -->
+  <button class="back-to-top" id="backToTop" aria-label="Voltar ao topo da página">
+    <svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><path fill="currentColor" d="M12 5l-7 7h4v7h6v-7h4z"/></svg>
+  </button>
+
+  <script src="script.js"></script>
+</body>
+</html>
