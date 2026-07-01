@@ -383,7 +383,7 @@ h1, h2, h3, h4 {
   flex-direction: column;
   align-items: flex-start;
   justify-content: center;
-  padding: 0 1.5rem;
+  padding: 90 px 1.5rem 0;
   overflow: hidden;
 }
 
