@@ -430,7 +430,7 @@ h1, h2, h3, h4 {
 }
 
 .hero__title {
-  font-size: clamp(2.5rem, 5vw, rem);
+  font-size: clamp(2.5rem, 5vw, 3.5rem);
   font-weight: 700;
   margin-bottom: 1.5rem;
 }
