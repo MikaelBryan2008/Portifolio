@@ -772,7 +772,7 @@ h1, h2, h3, h4 {
   }
 }
 
-/* --- Mobile (até 640px) --- */
+/* --- Mobile (até 768px) --- */
 @media (max-width: 640px) {
   :root {
     --section-padding: 4.5rem;
