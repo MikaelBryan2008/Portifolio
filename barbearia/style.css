@@ -1,27 +1,4 @@
-/* ============================================================
-   ROYAL BARBER — STYLE.CSS
-   Estrutura do arquivo:
-   1. Reset & variáveis globais (design tokens)
-   2. Utilitários (container, animações reveal)
-   3. Navbar + menu mobile
-   4. Hero section
-   5. Seção de Serviços
-   6. Galeria + Lightbox
-   7. Equipe
-   8. Agendamento (formulário)
-   9. Depoimentos (carrossel)
-   10. FAQ (acordeão)
-   11. Localização
-   12. WhatsApp flutuante
-   13. Rodapé
-   14. Botão voltar ao topo
-   15. Responsividade (media queries)
-============================================================ */
 
-
-/* ============================================================
-   1. RESET & VARIÁVEIS GLOBAIS
-============================================================ */
 *, *::before, *::after {
   margin: 0;
   padding: 0;
@@ -29,31 +6,28 @@
 }
 
 :root {
-  /* --- Paleta de cores --- */
-  --color-bg: #0A0A0A;           /* preto base, levemente mais quente que #000 */
-  --color-surface: #141414;      /* superfícies de cards */
-  --color-surface-2: #1B1B1B;    /* superfícies elevadas / hover */
+
+  --color-bg: #0A0A0A;          
+  --color-surface: #141414;     
+  --color-surface-2: #1B1B1B;   
   --color-border: rgba(255,255,255,0.08);
 
-  --color-gold: #C9A227;         /* dourado principal, fosco — não neon */
-  --color-gold-light: #E8C766;   /* dourado claro, hover/destaque */
-  --color-gold-dim: #7A6420;     /* dourado escurecido, para sombras/gradientes */
+  --color-gold: #C9A227;       
+  --color-gold-light: #E8C766;   
+  --color-gold-dim: #7A6420;    
 
-  --color-text: #F5F2EA;         /* branco quente (não puro #fff) */
-  --color-text-muted: #ABA6A0;   /* texto secundário */
-  --color-text-dim: #6F6A64;     /* texto terciário / legendas */
+  --color-text: #F5F2EA;        
+  --color-text-muted: #ABA6A0;   
+  --color-text-dim: #6F6A64;     
 
-  /* --- Tipografia --- */
   --font-display: 'Fraunces', serif;
   --font-body: 'Manrope', sans-serif;
 
-  /* --- Espaçamento / layout --- */
   --container-w: 1240px;
   --radius-sm: 6px;
   --radius-md: 14px;
   --radius-lg: 28px;
 
-  /* --- Transições --- */
   --ease: cubic-bezier(0.22, 1, 0.36, 1);
   --transition-fast: 0.25s var(--ease);
   --transition-mid: 0.45s var(--ease);
@@ -62,10 +36,9 @@
 
 html {
   scroll-behavior: smooth;
-  scroll-padding-top: 90px; /* compensa a navbar fixa ao usar âncoras */
+  scroll-padding-top: 90px; 
 }
 
-/* Respeita usuários que preferem menos movimento */
 @media (prefers-reduced-motion: reduce) {
   html { scroll-behavior: auto; }
   *, *::before, *::after {
@@ -91,17 +64,12 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
 ul { list-style: none; }
 input, select { font-family: inherit; }
 
-/* Foco visível para acessibilidade via teclado */
 :focus-visible {
   outline: 2px solid var(--color-gold-light);
   outline-offset: 3px;
   border-radius: 4px;
 }
 
-
-/* ============================================================
-   2. UTILITÁRIOS
-============================================================ */
 .container {
   width: 100%;
   max-width: var(--container-w);
@@ -110,7 +78,6 @@ input, select { font-family: inherit; }
 }
 .container--narrow { max-width: 760px; }
 
-/* --- Cabeçalho padrão de seção --- */
 .section-head {
   max-width: 640px;
   margin-bottom: 56px;
@@ -128,7 +95,7 @@ input, select { font-family: inherit; }
   margin-bottom: 18px;
 }
 .section-tag--light { color: var(--color-bg); }
-/* Mini "tira de navalha" — listras diagonais douradas/pretas, motivo de barbearia usado como marcador de seção em vez de numeração genérica */
+
 .section-tag__stripe {
   width: 28px;
   height: 10px;
@@ -155,7 +122,6 @@ input, select { font-family: inherit; }
 }
 .section-desc--light { color: rgba(10,10,10,0.7); }
 
-/* --- Botões --- */
 .btn {
   display: inline-flex;
   align-items: center;
@@ -213,8 +179,6 @@ input, select { font-family: inherit; }
   box-shadow: 0 10px 26px -10px rgba(37,211,102,0.4);
 }
 
-/* --- Sistema de Reveal (entrada ao rolar) --- */
-/* O JS adiciona a classe .in-view quando o elemento entra na viewport */
 .reveal {
   opacity: 0;
   transform: translateY(36px);
@@ -225,7 +189,6 @@ input, select { font-family: inherit; }
   transform: translateY(0);
 }
 
-/* Linhas do título do Hero — revelam de baixo para cima com clip, efeito editorial */
 .reveal-line {
   display: block;
   overflow: hidden;
@@ -239,10 +202,6 @@ input, select { font-family: inherit; }
   transform: translateY(0);
 }
 
-
-/* ============================================================
-   3. NAVBAR + MENU MOBILE
-============================================================ */
 .navbar {
   position: fixed;
   top: 0;
@@ -337,7 +296,6 @@ input, select { font-family: inherit; }
   transform: translateY(-2px);
 }
 
-/* Hambúrguer (visível só em mobile) */
 .navbar__burger {
   display: none;
   flex-direction: column;
@@ -405,10 +363,6 @@ input, select { font-family: inherit; }
   font-weight: 700;
 }
 
-
-/* ============================================================
-   4. HERO SECTION
-============================================================ */
 .hero {
   position: relative;
   min-height: 100vh;
@@ -418,7 +372,6 @@ input, select { font-family: inherit; }
   overflow: hidden;
 }
 
-/* Fundo: gradiente radial sutil + linhas finas verticais, textura de "estúdio" */
 .hero__bg {
   position: absolute;
   inset: 0;
@@ -428,7 +381,6 @@ input, select { font-family: inherit; }
     repeating-linear-gradient(90deg, rgba(255,255,255,0.025) 0px, rgba(255,255,255,0.025) 1px, transparent 1px, transparent 80px);
 }
 
-/* Listra de navalha decorativa, fina, no canto — referência literal ao barber pole, sem ser caricata */
 .hero__stripe {
   position: absolute;
   top: 0;
@@ -546,10 +498,6 @@ input, select { font-family: inherit; }
   50% { transform: scaleY(0.6); opacity: 1; }
 }
 
-
-/* ============================================================
-   5. SERVIÇOS
-============================================================ */
 .services { padding: 130px 0; background: var(--color-bg); }
 
 .services__grid {
@@ -616,10 +564,6 @@ input, select { font-family: inherit; }
   color: var(--color-text-dim);
 }
 
-
-/* ============================================================
-   6. GALERIA + LIGHTBOX
-============================================================ */
 .gallery { padding: 130px 0; background: var(--color-surface); }
 
 .gallery__grid {
@@ -697,10 +641,6 @@ input, select { font-family: inherit; }
 }
 .lightbox__close:hover { color: var(--color-gold-light); transform: rotate(90deg); }
 
-
-/* ============================================================
-   7. EQUIPE
-============================================================ */
 .team { padding: 130px 0; background: var(--color-bg); }
 
 .team__grid {
@@ -764,10 +704,6 @@ input, select { font-family: inherit; }
   transform: translateY(-2px);
 }
 
-
-/* ============================================================
-   8. AGENDAMENTO
-============================================================ */
 .booking {
   position: relative;
   padding: 130px 0;
@@ -878,10 +814,6 @@ input, select { font-family: inherit; }
   min-height: 20px;
 }
 
-
-/* ============================================================
-   9. DEPOIMENTOS (CARROSSEL)
-============================================================ */
 .testimonials { padding: 130px 0; background: var(--color-bg); }
 
 .testimonials__track-wrap { overflow: hidden; }
@@ -965,10 +897,6 @@ input, select { font-family: inherit; }
   transform: scale(1.3);
 }
 
-
-/* ============================================================
-   10. FAQ (ACORDEÃO)
-============================================================ */
 .faq { padding: 130px 0; background: var(--color-surface); }
 
 .faq__list { display: flex; flex-direction: column; gap: 14px; }
@@ -1012,10 +940,6 @@ input, select { font-family: inherit; }
   line-height: 1.6;
 }
 
-
-/* ============================================================
-   11. LOCALIZAÇÃO
-============================================================ */
 .location { padding: 130px 0; background: var(--color-bg); }
 
 .location__grid {
@@ -1049,10 +973,6 @@ input, select { font-family: inherit; }
   border: 0;
 }
 
-
-/* ============================================================
-   12. WHATSAPP FLUTUANTE
-============================================================ */
 .whatsapp-float {
   position: fixed;
   bottom: 28px;
@@ -1087,10 +1007,6 @@ input, select { font-family: inherit; }
   100% { opacity: 0; }
 }
 
-
-/* ============================================================
-   13. RODAPÉ
-============================================================ */
 .footer { background: #070707; border-top: 1px solid var(--color-border); padding-top: 80px; }
 
 .footer__inner {
@@ -1160,10 +1076,6 @@ input, select { font-family: inherit; }
   color: var(--color-text-dim);
 }
 
-
-/* ============================================================
-   14. BOTÃO VOLTAR AO TOPO
-============================================================ */
 .back-to-top {
   position: fixed;
   bottom: 28px;
@@ -1192,12 +1104,6 @@ input, select { font-family: inherit; }
 }
 .back-to-top svg { width: 20px; height: 20px; }
 
-
-/* ============================================================
-   15. RESPONSIVIDADE
-============================================================ */
-
-/* --- Tablets grandes / laptops pequenos --- */
 @media (max-width: 1080px) {
   .services__grid { grid-template-columns: repeat(2, 1fr); }
   .team__grid { grid-template-columns: repeat(2, 1fr); }
@@ -1205,16 +1111,14 @@ input, select { font-family: inherit; }
   .booking__container,
   .location__grid { grid-template-columns: 1fr; }
   .location__map { min-height: 320px; }
-  .testimonial-card { flex: 0 0 calc((100% - 24px) / 2); } /* 2 cards visíveis */
+  .testimonial-card { flex: 0 0 calc((100% - 24px) / 2); }
 }
 
-/* --- Navbar mobile --- */
 @media (max-width: 920px) {
   .navbar__links, .navbar__cta { display: none; }
   .navbar__burger { display: flex; }
 }
 
-/* --- Tablets / mobile grande --- */
 @media (max-width: 760px) {
   .container { padding: 0 22px; }
 
@@ -1229,7 +1133,7 @@ input, select { font-family: inherit; }
   .footer__inner { grid-template-columns: 1fr 1fr; gap: 32px; }
   .footer__brand { grid-column: 1 / -1; }
 
-  .testimonial-card { flex: 0 0 100%; } /* 1 card por vez no mobile */
+  .testimonial-card { flex: 0 0 100%; }
 
   .form-row { grid-template-columns: 1fr; }
   .booking__form { padding: 28px; }
@@ -1237,7 +1141,6 @@ input, select { font-family: inherit; }
   .footer__bottom-inner { flex-direction: column; text-align: center; }
 }
 
-/* --- Mobile pequeno --- */
 @media (max-width: 480px) {
   .hero__title { font-size: clamp(2.4rem, 11vw, 3.2rem); }
   .hero__actions { flex-direction: column; }

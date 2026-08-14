@@ -1,19 +1,4 @@
-/* ==========================================================================
-   BELLA MASSA — Stylesheet
-   ----------------------------------------------------------------------
-   Paleta:
-     --bg-base    #13110F  (quase-preto, tom quente — não preto puro)
-     --bg-card    #1C1916  (superfícies, cards)
-     --gold       #C9A156  (dourado envelhecido — accent principal)
-     --wine       #6B2030  (vinho profundo — segundo accent)
-     --ivory      #F2EDE4  (texto principal sobre fundo escuro)
-     --stone      #8A8275  (texto secundário / legendas)
-   Tipografia:
-     Fraunces (display, serifada com personalidade italiana)
-     Manrope  (corpo, moderna e legível)
-   ========================================================================== */
 
-/* ---------- 1. RESET ---------- */
 *,
 *::before,
 *::after {
@@ -62,9 +47,8 @@ textarea {
   color: inherit;
 }
 
-/* ---------- 2. VARIÁVEIS GLOBAIS ---------- */
 :root {
-  /* Cores */
+
   --bg-base: #13110f;
   --bg-base-rgb: 19, 17, 15;
   --bg-card: #1c1916;
@@ -79,25 +63,21 @@ textarea {
   --line: rgba(242, 237, 228, 0.1);
   --line-strong: rgba(242, 237, 228, 0.18);
 
-  /* Tipografia */
   --font-display: "Fraunces", Georgia, serif;
   --font-body: "Manrope", -apple-system, BlinkMacSystemFont, sans-serif;
 
-  /* Layout */
   --container-max: 1240px;
   --section-pad-y: clamp(4.5rem, 9vw, 8rem);
   --radius-sm: 6px;
   --radius-md: 16px;
   --radius-lg: 28px;
 
-  /* Movimento */
   --ease: cubic-bezier(0.22, 1, 0.36, 1);
   --speed-fast: 0.25s;
   --speed-mid: 0.5s;
   --speed-slow: 0.9s;
 }
 
-/* ---------- 3. BASE ---------- */
 body {
   font-family: var(--font-body);
   background: var(--bg-base);
@@ -132,7 +112,6 @@ em {
   border-radius: 2px;
 }
 
-/* Eyebrow — label utilitária acima dos títulos de seção */
 .eyebrow {
   display: inline-flex;
   align-items: center;
@@ -169,7 +148,6 @@ em {
   margin-bottom: clamp(2.5rem, 5vw, 4rem);
 }
 
-/* ---------- 4. BOTÕES ---------- */
 .btn {
   display: inline-flex;
   align-items: center;
@@ -226,7 +204,6 @@ em {
   transform: translateY(-2px);
 }
 
-/* ---------- 5. PRELOADER ---------- */
 .preloader {
   position: fixed;
   inset: 0;
@@ -280,7 +257,6 @@ em {
   }
 }
 
-/* ---------- 6. NAVBAR FIXA ---------- */
 .navbar {
   position: fixed;
   top: 0;
@@ -410,7 +386,6 @@ em {
   transform: translateY(-6.5px) rotate(-45deg);
 }
 
-/* ---------- 7. DRAWER MOBILE ---------- */
 .drawer {
   position: fixed;
   top: 0;
@@ -474,7 +449,6 @@ em {
   visibility: visible;
 }
 
-/* ---------- 8. HERO ---------- */
 .hero {
   position: relative;
   min-height: 100vh;
@@ -494,7 +468,7 @@ em {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  color: transparent; /* evita que o alt text apareça caso a imagem falhe ao carregar */
+  color: transparent;
   transform: scale(1.08);
   animation: heroZoom 16s var(--ease) forwards;
 }
@@ -582,7 +556,6 @@ em {
   .hero__scroll span { animation: none; }
 }
 
-/* ---------- 9. SCROLL REVEAL (genérico) ---------- */
 [data-reveal] {
   opacity: 0;
   transform: translateY(28px);
@@ -602,7 +575,6 @@ em {
   }
 }
 
-/* ---------- 10. HISTÓRIA ---------- */
 .historia {
   padding: var(--section-pad-y) 0;
   background: var(--bg-base);
@@ -670,7 +642,6 @@ em {
   margin-top: 0.2rem;
 }
 
-/* ---------- 11. CARDÁPIO ---------- */
 .cardapio {
   padding: var(--section-pad-y) 0;
   background: var(--bg-card);
@@ -763,7 +734,6 @@ em {
   max-width: 380px;
 }
 
-/* ---------- 12. PRATOS EM DESTAQUE ---------- */
 .destaques {
   padding: var(--section-pad-y) 0;
   background: var(--bg-base);
@@ -846,7 +816,6 @@ em {
   color: var(--gold);
 }
 
-/* ---------- 13. GALERIA ---------- */
 .galeria {
   padding: var(--section-pad-y) 0;
   background: var(--bg-card);
@@ -954,7 +923,6 @@ em {
   color: var(--gold);
 }
 
-/* ---------- 14. RESERVA ---------- */
 .reserva {
   padding: var(--section-pad-y) 0;
   background: var(--bg-base);
@@ -1060,7 +1028,6 @@ em {
   color: #e08585;
 }
 
-/* ---------- 15. AVALIAÇÕES ---------- */
 .avaliacoes {
   padding: var(--section-pad-y) 0;
   background: var(--bg-card);
@@ -1143,7 +1110,6 @@ em {
   color: var(--stone);
 }
 
-/* ---------- 16. HORÁRIO + LOCALIZAÇÃO ---------- */
 .info {
   padding: var(--section-pad-y) 0;
   background: var(--bg-base);
@@ -1207,7 +1173,6 @@ em {
   border: 0;
 }
 
-/* ---------- 17. RODAPÉ ---------- */
 .footer {
   background: var(--bg-card);
   border-top: 1px solid var(--line);
@@ -1280,7 +1245,6 @@ em {
   color: var(--stone);
 }
 
-/* ---------- 18. WHATSAPP FLUTUANTE + VOLTAR AO TOPO ---------- */
 .whatsapp-float {
   position: fixed;
   bottom: 28px;
@@ -1337,9 +1301,6 @@ em {
   color: var(--gold);
 }
 
-/* ==========================================================================
-   19. RESPONSIVIDADE — TABLET (≤ 1024px)
-   ========================================================================== */
 @media (max-width: 1024px) {
   .navbar__links,
   .navbar__cta {
@@ -1374,9 +1335,6 @@ em {
   }
 }
 
-/* ==========================================================================
-   20. RESPONSIVIDADE — MOBILE (≤ 768px)
-   ========================================================================== */
 @media (max-width: 768px) {
   :root {
     --section-pad-y: 4rem;

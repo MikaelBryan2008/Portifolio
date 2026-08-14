@@ -6,7 +6,6 @@
   <title>Mikael Bryan — Desenvolvedor Web</title>
   <meta name="description" content="Portfólio de Mikael Bryan, desenvolvedor front-end especializado em interfaces modernas e responsivas.">
 
-  <!-- Fontes do Google Fonts: Space Grotesk (títulos) + Inter (texto corrido) -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
@@ -15,8 +14,6 @@
 </head>
 <body>
 
-  <!-- ===================== NAVBAR ===================== -->
-  <!-- Navbar fixa no topo, com fundo translúcido que ganha blur ao rolar (controlado via JS) -->
   <header class="navbar" id="navbar">
     <nav class="navbar__inner">
       <a href="#hero" class="navbar__logo">
@@ -33,7 +30,6 @@
 
       <a href="#contato" class="btn btn--small btn--primary navbar__cta">Falar comigo</a>
 
-      <!-- Botão hambúrguer (some em telas grandes, via CSS) -->
       <button class="navbar__toggle" id="navToggle" aria-label="Abrir menu" aria-expanded="false">
         <span></span>
         <span></span>
@@ -42,7 +38,6 @@
     </nav>
   </header>
 
-  <!-- Menu mobile (painel deslizante) -->
   <div class="mobile-menu" id="mobileMenu">
     <ul class="mobile-menu__links">
       <li><a href="#hero" class="mobile-menu__link">Início</a></li>
@@ -53,9 +48,9 @@
   </div>
 
   <main>
-    <!-- ===================== HERO SECTION ===================== -->
+
     <section class="hero" id="hero">
-      <!-- Grade de fundo decorativa, puramente estética -->
+    
       <div class="hero__grid" aria-hidden="true"></div>
 
       <div class="hero__content">
@@ -79,14 +74,14 @@
         </div>
       </div>
 
-      <!-- Indicador de scroll discreto -->
+    
       <a href="#projetos" class="hero__scroll-hint" aria-label="Rolar para projetos">
         <span class="hero__scroll-line"></span>
         <span class="hero__scroll-text">Scroll</span>
       </a>
     </section>
 
-    <!-- ===================== SEÇÃO PROJETOS ===================== -->
+    
     <section class="projects" id="projetos">
       <div class="section-header fade-up">
         <p class="section-header__eyebrow">Trabalhos selecionados</p>
@@ -99,7 +94,6 @@
 
       <div class="projects__grid">
 
-        <!-- Card 1: Landing Page Academia -->
         <article class="card fade-up">
           <div class="card__image-wrap">
             <img
@@ -128,7 +122,6 @@
           </div>
         </article>
 
-        <!-- Card 2: Restaurante Italiano -->
         <article class="card fade-up">
           <div class="card__image-wrap">
             <img
@@ -157,7 +150,6 @@
           </div>
         </article>
 
-        <!-- Card 3: Barbearia -->
         <article class="card fade-up">
           <div class="card__image-wrap">
             <img
@@ -188,7 +180,6 @@
       </div>
     </section>
 
-    <!-- ===================== SOBRE ===================== -->
     <section class="about" id="sobre">
       <div class="about__content fade-up">
         <p class="section-header__eyebrow">Sobre mim</p>
@@ -213,7 +204,6 @@
     </section>
   </main>
 
-  <!-- ===================== FOOTER ===================== -->
   <footer class="footer" id="contato">
     <div class="footer__content">
       <div class="footer__main">

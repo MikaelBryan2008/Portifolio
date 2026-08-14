@@ -1,23 +1,3 @@
-/* =========================================================
-   PORTFÓLIO — MIKAEL BRYAN
-   Arquivo de estilos (style.css)
-
-   Estrutura deste arquivo:
-   1. Reset e variáveis globais
-   2. Tipografia base
-   3. Utilitários (botões, container, animações)
-   4. Navbar e menu mobile
-   5. Hero Section
-   6. Seção de Projetos (cards)
-   7. Seção Sobre
-   8. Footer
-   9. Responsividade (media queries)
-   ========================================================= */
-
-
-/* =========================================================
-   1. RESET E VARIÁVEIS GLOBAIS
-   ========================================================= */
 
 * {
   margin: 0;
@@ -26,36 +6,33 @@
 }
 
 :root {
-  /* Paleta de cores sóbria: preto, branco, cinza + azul de destaque */
-  --color-bg: #0a0a0b;          /* Preto profundo (fundo principal) */
-  --color-bg-soft: #111113;      /* Preto levemente mais claro (seções alternadas) */
-  --color-surface: #18181b;      /* Superfície dos cards */
-  --color-border: #27272a;       /* Bordas sutis */
 
-  --color-text: #f4f4f5;         /* Branco levemente acinzentado (texto principal) */
-  --color-text-muted: #8a8f98;   /* Cinza (texto secundário) */
-  --color-text-faint: #52525b;   /* Cinza mais escuro (texto terciário) */
+  --color-bg: #0a0a0b;       
+  --color-bg-soft: #111113;     
+  --color-surface: #18181b;     
+  --color-border: #27272a;     
 
-  --color-accent: #2563eb;       /* Azul moderno de destaque */
-  --color-accent-light: #3b82f6; /* Azul mais claro (hover) */
-  --color-accent-soft: rgba(37, 99, 235, 0.12); /* Azul translúcido (fundos) */
+  --color-text: #f4f4f5;         
+  --color-text-muted: #8a8f98;  
+  --color-text-faint: #52525b;  
 
-  /* Tipografia */
+  --color-accent: #2563eb;       
+  --color-accent-light: #3b82f6; 
+  --color-accent-soft: rgba(37, 99, 235, 0.12);
+
   --font-display: 'Space Grotesk', sans-serif;
   --font-body: 'Inter', sans-serif;
 
-  /* Espaçamentos padronizados */
   --container-width: 1140px;
   --section-padding: 8rem;
 
-  /* Transições padronizadas para consistência em toda a página */
   --transition-fast: 0.2s ease;
   --transition-medium: 0.4s cubic-bezier(0.22, 1, 0.36, 1);
 }
 
 html {
-  scroll-behavior: smooth; /* Scroll suave nativo entre seções */
-  scroll-padding-top: 80px; /* Compensa a navbar fixa ao usar âncoras */
+  scroll-behavior: smooth; 
+  scroll-padding-top: 80px; 
 }
 
 body {
@@ -88,7 +65,6 @@ button {
   background: none;
 }
 
-/* Foco visível para acessibilidade (navegação via teclado) */
 a:focus-visible,
 button:focus-visible {
   outline: 2px solid var(--color-accent);
@@ -96,7 +72,6 @@ button:focus-visible {
   border-radius: 4px;
 }
 
-/* Respeita usuários que preferem menos animação no sistema */
 @media (prefers-reduced-motion: reduce) {
   html {
     scroll-behavior: auto;
@@ -109,11 +84,6 @@ button:focus-visible {
   }
 }
 
-
-/* =========================================================
-   2. TIPOGRAFIA BASE
-   ========================================================= */
-
 h1, h2, h3, h4 {
   font-family: var(--font-display);
   font-weight: 600;
@@ -122,10 +92,6 @@ h1, h2, h3, h4 {
 }
 
 
-/* =========================================================
-   3. UTILITÁRIOS
-   ========================================================= */
-
 .container {
   width: 100%;
   max-width: var(--container-width);
@@ -133,8 +99,6 @@ h1, h2, h3, h4 {
   padding: 0 1.5rem;
 }
 
-/* --- Botões --- */
-/* Sistema único de botão (.btn) com modificadores de estilo e tamanho */
 
 .btn {
   display: inline-flex;
@@ -156,7 +120,6 @@ h1, h2, h3, h4 {
   font-size: 0.85rem;
 }
 
-/* Botão primário: azul de destaque, fundo sólido */
 .btn--primary {
   background-color: var(--color-accent);
   color: #ffffff;
@@ -171,7 +134,6 @@ h1, h2, h3, h4 {
   transform: translateY(0);
 }
 
-/* Botão "ghost": contorno sutil, transparente */
 .btn--ghost {
   background-color: transparent;
   color: var(--color-text);
@@ -192,8 +154,6 @@ h1, h2, h3, h4 {
   transform: translateX(4px);
 }
 
-/* --- Animação de entrada ao rolar a página --- */
-/* Classe aplicada via JavaScript (Intersection Observer) quando o elemento entra na tela */
 .fade-up {
   opacity: 0;
   transform: translateY(24px);
@@ -205,10 +165,6 @@ h1, h2, h3, h4 {
   transform: translateY(0);
 }
 
-
-/* =========================================================
-   4. NAVBAR E MENU MOBILE
-   ========================================================= */
 
 .navbar {
   position: fixed;
@@ -223,7 +179,6 @@ h1, h2, h3, h4 {
               padding var(--transition-medium);
 }
 
-/* Estado aplicado via JS quando o usuário rola a página (efeito "glass") */
 .navbar.is-scrolled {
   background-color: rgba(10, 10, 11, 0.75);
   backdrop-filter: blur(12px);
@@ -305,7 +260,6 @@ h1, h2, h3, h4 {
   flex-shrink: 0;
 }
 
-/* Botão hambúrguer — escondido no desktop, exibido apenas no mobile */
 .navbar__toggle {
   display: none;
   flex-direction: column;
@@ -325,7 +279,6 @@ h1, h2, h3, h4 {
   transition: transform var(--transition-fast), opacity var(--transition-fast);
 }
 
-/* Estado "aberto" do hambúrguer: transforma em X */
 .navbar__toggle.is-active span:nth-child(1) {
   transform: translateY(7px) rotate(45deg);
 }
@@ -336,7 +289,6 @@ h1, h2, h3, h4 {
   transform: translateY(-7px) rotate(-45deg);
 }
 
-/* Painel do menu mobile */
 .mobile-menu {
   position: fixed;
   top: 0;
@@ -370,11 +322,7 @@ h1, h2, h3, h4 {
   font-weight: 600;
   color: var(--color-text);
 }
-
-
-/* =========================================================
-   5. HERO SECTION
-   ========================================================= */
+ */
 
 .hero {
   position: relative;
@@ -387,7 +335,6 @@ h1, h2, h3, h4 {
   overflow: hidden;
 }
 
-/* Grade decorativa de fundo, sutil, criada apenas com CSS gradients */
 .hero__grid {
   position: absolute;
   inset: 0;
@@ -449,7 +396,6 @@ h1, h2, h3, h4 {
   flex-wrap: wrap;
 }
 
-/* Indicador de scroll no canto inferior, discreto */
 .hero__scroll-hint {
   position: absolute;
   bottom: 2.5rem;
@@ -478,7 +424,6 @@ h1, h2, h3, h4 {
   overflow: hidden;
 }
 
-/* Pequeno "pulso" que desliza pela linha do indicador de scroll */
 .hero__scroll-line::after {
   content: '';
   position: absolute;
@@ -495,10 +440,6 @@ h1, h2, h3, h4 {
   100% { top: 100%; }
 }
 
-
-/* =========================================================
-   6. SEÇÃO DE PROJETOS (CARDS)
-   ========================================================= */
 
 .projects {
   padding: var(--section-padding) 1.5rem;
@@ -536,7 +477,6 @@ h1, h2, h3, h4 {
   gap: 1.75rem;
 }
 
-/* --- Card de projeto --- */
 .card {
   background-color: var(--color-surface);
   border: 1px solid var(--color-border);
@@ -619,10 +559,6 @@ h1, h2, h3, h4 {
 }
 
 
-/* =========================================================
-   7. SEÇÃO SOBRE
-   ========================================================= */
-
 .about {
   background-color: var(--color-bg-soft);
   border-top: 1px solid var(--color-border);
@@ -666,11 +602,6 @@ h1, h2, h3, h4 {
   border-color: var(--color-accent);
   color: var(--color-accent-light);
 }
-
-
-/* =========================================================
-   8. FOOTER
-   ========================================================= */
 
 .footer {
   padding: var(--section-padding) 1.5rem 2.5rem;
@@ -748,12 +679,6 @@ h1, h2, h3, h4 {
   transform: translateY(-3px);
 }
 
-
-/* =========================================================
-   9. RESPONSIVIDADE
-   ========================================================= */
-
-/* --- Tablets (até 1024px) --- */
 @media (max-width: 1024px) {
   :root {
     --section-padding: 6rem;
@@ -764,7 +689,7 @@ h1, h2, h3, h4 {
   }
 
   .navbar__links {
-    display: none; /* Esconde os links da navbar; substituídos pelo menu mobile */
+    display: none; 
   }
 
   .navbar__toggle {
@@ -772,14 +697,13 @@ h1, h2, h3, h4 {
   }
 }
 
-/* --- Mobile (até 768px) --- */
 @media (max-width: 640px) {
   :root {
     --section-padding: 4.5rem;
   }
 
   .navbar__cta {
-    display: none; /* Esconde CTA na navbar para não competir com o hambúrguer */
+    display: none;
   }
 
   .hero {
@@ -840,7 +764,6 @@ h1, h2, h3, h4 {
 
 }
 
-/* --- Telas muito pequenas (até 380px) --- */
 @media (max-width: 380px) {
   .hero__title {
     font-size: 2.6rem;

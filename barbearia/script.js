@@ -1,37 +1,14 @@
-/* ============================================================
-   ROYAL BARBER — SCRIPT.JS
-   Estrutura do arquivo:
-   1. Utilitários
-   2. Navbar: estado "scrolled" + menu mobile
-   3. Reveal animations (IntersectionObserver)
-   4. Hero: contador animado das estatísticas
-   5. Galeria: lightbox
-   6. Agendamento: validação do formulário
-   7. Depoimentos: carrossel
-   8. FAQ: acordeão
-   9. Botão voltar ao topo
-   10. Rodapé: ano atual
-   11. Inicialização
-============================================================ */
+
 
 (function () {
   'use strict';
 
-  /* ============================================================
-     1. UTILITÁRIOS
-  ============================================================ */
-
-  // Verifica se o usuário prefere movimento reduzido (acessibilidade)
   const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
   // Pequeno helper para selecionar elementos
   const $ = (selector, scope = document) => scope.querySelector(selector);
   const $$ = (selector, scope = document) => Array.from(scope.querySelectorAll(selector));
 
-
-  /* ============================================================
-     2. NAVBAR: ESTADO "SCROLLED" + MENU MOBILE
-  ============================================================ */
   function initNavbar() {
     const navbar = $('#navbar');
     const burger = $('#navBurger');
@@ -39,25 +16,22 @@
 
     if (!navbar) return;
 
-    // Adiciona fundo sólido + blur na navbar após rolar um pouco a página
     function handleNavbarScroll() {
       navbar.classList.toggle('is-scrolled', window.scrollY > 40);
     }
     window.addEventListener('scroll', handleNavbarScroll, { passive: true });
-    handleNavbarScroll(); // estado inicial
+    handleNavbarScroll(); 
 
-    // Abre/fecha o menu mobile (hambúrguer)
     function toggleMobileMenu() {
       const isOpen = mobileMenu.classList.toggle('is-open');
       burger.classList.toggle('is-active', isOpen);
       burger.setAttribute('aria-expanded', String(isOpen));
-      document.body.style.overflow = isOpen ? 'hidden' : ''; // trava o scroll do body
+      document.body.style.overflow = isOpen ? 'hidden' : ''; 
     }
 
     if (burger && mobileMenu) {
       burger.addEventListener('click', toggleMobileMenu);
 
-      // Fecha o menu mobile ao clicar em qualquer link
       $$('.mobile-menu__link', mobileMenu).forEach(link => {
         link.addEventListener('click', () => {
           mobileMenu.classList.remove('is-open');
@@ -69,15 +43,10 @@
     }
   }
 
-
-  /* ============================================================
-     3. REVEAL ANIMATIONS (INTERSECTION OBSERVER)
-  ============================================================ */
   function initRevealAnimations() {
     const revealEls = $$('[data-reveal]');
     if (!revealEls.length) return;
 
-    // Se o usuário preferir menos movimento, mostra tudo direto sem animar
     if (prefersReducedMotion) {
       revealEls.forEach(el => el.classList.add('in-view'));
       return;
@@ -87,7 +56,7 @@
       entries.forEach(entry => {
         if (entry.isIntersecting) {
           entry.target.classList.add('in-view');
-          observer.unobserve(entry.target); // anima uma única vez
+          observer.unobserve(entry.target);
         }
       });
     }, {
@@ -98,16 +67,11 @@
     revealEls.forEach(el => observer.observe(el));
   }
 
-
-  /* ============================================================
-     4. HERO: CONTADOR ANIMADO DAS ESTATÍSTICAS
-  ============================================================ */
   function initHeroCounters() {
     const hero = $('.hero');
     const counters = $$('[data-count]');
     if (!hero) return;
 
-    // Efeito de "linhas do título subindo" ao carregar a página
     requestAnimationFrame(() => hero.classList.add('is-loaded'));
 
     if (!counters.length) return;
@@ -124,7 +88,7 @@
 
       function step(now) {
         const progress = Math.min((now - startTime) / duration, 1);
-        // easeOutExpo: começa rápido e desacelera no final
+      
         const eased = progress === 1 ? 1 : 1 - Math.pow(2, -10 * progress);
         const value = Math.floor(eased * target);
         el.textContent = value.toLocaleString('pt-BR');
@@ -135,7 +99,6 @@
       requestAnimationFrame(step);
     }
 
-    // Só dispara a contagem quando as estatísticas entram na tela
     const statObserver = new IntersectionObserver((entries) => {
       entries.forEach(entry => {
         if (entry.isIntersecting) {
@@ -149,10 +112,6 @@
     if (statsContainer) statObserver.observe(statsContainer);
   }
 
-
-  /* ============================================================
-     5. GALERIA: LIGHTBOX
-  ============================================================ */
   function initGalleryLightbox() {
     const items = $$('.gallery__item');
     const lightbox = $('#lightbox');
@@ -163,9 +122,9 @@
     if (!items.length || !lightbox) return;
 
     function openLightbox(item) {
-      // Extrai a URL da imagem do background-image inline definido no HTML
-      const bg = item.style.backgroundImage; // formato: url("...")
-      const url = bg.slice(5, -2); // remove 'url("' e '")'
+    
+      const bg = item.style.backgroundImage; 
+      const url = bg.slice(5, -2); 
       const caption = item.dataset.caption || '';
 
       lightboxImg.src = url;
@@ -185,7 +144,6 @@
     items.forEach(item => item.addEventListener('click', () => openLightbox(item)));
     closeBtn.addEventListener('click', closeLightbox);
 
-    // Fecha clicando fora da imagem ou pressionando Esc
     lightbox.addEventListener('click', (e) => {
       if (e.target === lightbox) closeLightbox();
     });
@@ -194,10 +152,6 @@
     });
   }
 
-
-  /* ============================================================
-     6. AGENDAMENTO: VALIDAÇÃO DO FORMULÁRIO
-  ============================================================ */
   function initBookingForm() {
     const form = $('#bookingForm');
     if (!form) return;
@@ -205,13 +159,11 @@
     const successMsg = $('#bookingSuccess');
     const dateInput = $('#date', form);
 
-    // Impede selecionar datas passadas no campo de data
     if (dateInput) {
       const today = new Date().toISOString().split('T')[0];
       dateInput.setAttribute('min', today);
     }
 
-    // Mensagens de erro amigáveis por campo
     const errorMessages = {
       name: 'Informe seu nome completo.',
       phone: 'Informe um telefone válido com DDD.',
@@ -227,7 +179,6 @@
       if (errorEl) errorEl.textContent = message || '';
     }
 
-    // Validação simples de telefone: aceita formatos comuns BR (10 ou 11 dígitos)
     function isValidPhone(value) {
       const digits = value.replace(/\D/g, '');
       return digits.length >= 10 && digits.length <= 11;
@@ -279,7 +230,6 @@
       return isValid;
     }
 
-    // Formatação automática do telefone no formato (00) 00000-0000
     const phoneInput = $('#phone', form);
     if (phoneInput) {
       phoneInput.addEventListener('input', (e) => {
@@ -301,8 +251,6 @@
         return;
       }
 
-      // Em produção, aqui seria feita uma chamada a uma API de agendamento.
-      // Como é um site estático, simulamos a confirmação visualmente.
       const formData = new FormData(form);
       const name = formData.get('name');
       const date = formData.get('date');
@@ -311,21 +259,17 @@
       successMsg.textContent = `Tudo certo, ${name.split(' ')[0]}! Seu horário em ${formatDate(date)} às ${time} foi reservado. Em breve confirmaremos por WhatsApp.`;
 
       form.reset();
-      // Garante que a data mínima continue aplicada após o reset
+    
       if (dateInput) dateInput.setAttribute('min', new Date().toISOString().split('T')[0]);
     });
 
-    // Converte 'AAAA-MM-DD' para 'DD/MM/AAAA' para exibição amigável
+  
     function formatDate(isoDate) {
       const [year, month, day] = isoDate.split('-');
       return `${day}/${month}/${year}`;
     }
   }
 
-
-  /* ============================================================
-     7. DEPOIMENTOS: CARROSSEL
-  ============================================================ */
   function initTestimonialsCarousel() {
     const track = $('#testimonialsTrack');
     const prevBtn = $('#testPrev');
@@ -380,7 +324,6 @@
     nextBtn.addEventListener('click', () => goToSlide(currentIndex + 1 > maxIndex ? 0 : currentIndex + 1));
     prevBtn.addEventListener('click', () => goToSlide(currentIndex - 1 < 0 ? maxIndex : currentIndex - 1));
 
-    // Recalcula posições e número de cards visíveis ao redimensionar a janela
     let resizeTimeout;
     window.addEventListener('resize', () => {
       clearTimeout(resizeTimeout);
@@ -397,10 +340,6 @@
     updateTrackPosition();
   }
 
-
-  /* ============================================================
-     8. FAQ: ACORDEÃO
-  ============================================================ */
   function initFaqAccordion() {
     const items = $$('.faq-item');
     if (!items.length) return;
@@ -412,14 +351,12 @@
       question.addEventListener('click', () => {
         const isOpen = item.classList.contains('is-open');
 
-        // Fecha todos os outros itens (comportamento de acordeão clássico)
         items.forEach(other => {
           other.classList.remove('is-open');
           $('.faq-item__question', other).setAttribute('aria-expanded', 'false');
           $('.faq-item__answer', other).style.maxHeight = null;
         });
 
-        // Reabre o item clicado, se ele estava fechado
         if (!isOpen) {
           item.classList.add('is-open');
           question.setAttribute('aria-expanded', 'true');
@@ -429,10 +366,6 @@
     });
   }
 
-
-  /* ============================================================
-     9. BOTÃO VOLTAR AO TOPO
-  ============================================================ */
   function initBackToTop() {
     const btn = $('#backToTop');
     if (!btn) return;
@@ -452,19 +385,11 @@
     });
   }
 
-
-  /* ============================================================
-     10. RODAPÉ: ANO ATUAL
-  ============================================================ */
   function initFooterYear() {
     const yearEl = $('#year');
     if (yearEl) yearEl.textContent = new Date().getFullYear();
   }
 
-
-  /* ============================================================
-     11. INICIALIZAÇÃO
-  ============================================================ */
   document.addEventListener('DOMContentLoaded', () => {
     initNavbar();
     initRevealAnimations();

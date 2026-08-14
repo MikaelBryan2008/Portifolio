@@ -6,30 +6,21 @@
   <title>PowerFit — Treine Forte. Viva Mais.</title>
   <meta name="description" content="PowerFit: a academia premium para quem busca evolução real. Aulas experimentais gratuitas, personal trainers de elite e estrutura completa." />
 
-  <!-- ============ FONTES GOOGLE ============ -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Anton&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 
-  <!-- ============ ÍCONES (Phosphor Icons via CDN) ============ -->
   <script src="https://unpkg.com/@phosphor-icons/web@2.1.1"></script>
 
-  <!-- ============ CSS PRÓPRIO ============ -->
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
 
-  <!-- ===================================================== -->
-  <!-- LOADER (animação de entrada)                           -->
-  <!-- ===================================================== -->
   <div id="loader" class="loader" aria-hidden="true">
     <span class="loader__logo">POWER<span class="text-purple">FIT</span></span>
     <div class="loader__bar"><div class="loader__fill"></div></div>
   </div>
 
-  <!-- ===================================================== -->
-  <!-- NAVBAR FIXA                                            -->
-  <!-- ===================================================== -->
   <header class="navbar" id="navbar">
     <div class="container navbar__inner">
 
@@ -38,7 +29,6 @@
         POWER<span class="text-purple">FIT</span>
       </a>
 
-      <!-- Links de navegação (desktop) -->
       <nav class="navbar__nav" id="navMenu">
         <a href="#beneficios" class="navbar__link">Benefícios</a>
         <a href="#planos" class="navbar__link">Planos</a>
@@ -49,7 +39,6 @@
         <a href="#localizacao" class="navbar__link">Localização</a>
       </nav>
 
-      <!-- CTA + botão hambúrguer -->
       <div class="navbar__actions">
         <a href="#contato" class="btn btn--primary btn--small">Aula Experimental</a>
         <button class="navbar__toggle" id="navToggle" aria-label="Abrir menu" aria-expanded="false">
@@ -60,9 +49,6 @@
   </header>
 
   <main>
-    <!-- ===================================================== -->
-    <!-- HERO SECTION                                           -->
-    <!-- ===================================================== -->
     <section class="hero" id="hero">
       <!-- Imagem de fundo da academia -->
       <div class="hero__media">
@@ -96,7 +82,6 @@
           </a>
         </div>
 
-        <!-- Estatísticas rápidas -->
         <div class="hero__stats fade-in">
           <div class="hero__stat">
             <span class="hero__stat-number" data-count="12">0</span><span class="text-purple">+</span>
@@ -113,15 +98,11 @@
         </div>
       </div>
 
-      <!-- Indicador de scroll -->
       <button class="hero__scroll-indicator" id="scrollIndicator" aria-label="Rolar para baixo">
         <i class="ph-bold ph-mouse-simple"></i>
       </button>
     </section>
 
-    <!-- ===================================================== -->
-    <!-- BENEFÍCIOS                                             -->
-    <!-- ===================================================== -->
     <section class="section" id="beneficios">
       <div class="container">
         <div class="section__header fade-in">
@@ -171,9 +152,6 @@
       </div>
     </section>
 
-    <!-- ===================================================== -->
-    <!-- PLANOS                                                 -->
-    <!-- ===================================================== -->
     <section class="section section--alt" id="planos">
       <div class="container">
         <div class="section__header fade-in">
@@ -245,9 +223,6 @@
       </div>
     </section>
 
-    <!-- ===================================================== -->
-    <!-- PERSONAL TRAINERS                                      -->
-    <!-- ===================================================== -->
     <section class="section" id="trainers">
       <div class="container">
         <div class="section__header fade-in">
@@ -309,9 +284,6 @@
       </div>
     </section>
 
-    <!-- ===================================================== -->
-    <!-- DEPOIMENTOS                                            -->
-    <!-- ===================================================== -->
     <section class="section section--alt" id="depoimentos">
       <div class="container">
         <div class="section__header fade-in">
@@ -319,7 +291,6 @@
           <h2 class="section__title">Quem treina aqui<br><span class="text-purple">não quer parar</span></h2>
         </div>
 
-        <!-- Carrossel de depoimentos -->
         <div class="testimonials" id="testimonials">
           <div class="testimonials__track" id="testimonialsTrack">
 
@@ -370,7 +341,6 @@
 
           </div>
 
-          <!-- Controles do carrossel -->
           <div class="testimonials__controls">
             <button class="testimonials__btn" id="testimonialPrev" aria-label="Depoimento anterior">
               <i class="ph-bold ph-arrow-left"></i>
@@ -384,9 +354,6 @@
       </div>
     </section>
 
-    <!-- ===================================================== -->
-    <!-- GALERIA                                                -->
-    <!-- ===================================================== -->
     <section class="section" id="galeria">
       <div class="container">
         <div class="section__header fade-in">
@@ -414,9 +381,6 @@
       </div>
     </section>
 
-    <!-- ===================================================== -->
-    <!-- FAQ                                                    -->
-    <!-- ===================================================== -->
     <section class="section section--alt" id="faq">
       <div class="container container--narrow">
         <div class="section__header fade-in">
@@ -485,9 +449,6 @@
       </div>
     </section>
 
-    <!-- ===================================================== -->
-    <!-- LOCALIZAÇÃO + CONTATO                                  -->
-    <!-- ===================================================== -->
     <section class="section" id="localizacao">
       <div class="container">
         <div class="section__header fade-in">
@@ -552,9 +513,6 @@
     </section>
   </main>
 
-  <!-- ===================================================== -->
-  <!-- RODAPÉ                                                 -->
-  <!-- ===================================================== -->
   <footer class="footer">
     <div class="container footer__inner">
 
@@ -599,14 +557,10 @@
     </div>
   </footer>
 
-  <!-- ===================================================== -->
-  <!-- BOTÃO VOLTAR AO TOPO                                   -->
-  <!-- ===================================================== -->
   <button id="backToTop" class="back-to-top" aria-label="Voltar ao topo">
     <i class="ph-bold ph-arrow-up"></i>
   </button>
 
-  <!-- ============ JAVASCRIPT PRÓPRIO ============ -->
   <script src="script.js"></script>
 </body>
 </html>

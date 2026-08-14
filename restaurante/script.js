@@ -1,23 +1,6 @@
-/* ==========================================================================
-   BELLA MASSA — Script principal
-   Organização:
-     1. Preloader
-     2. Navbar fixa (efeito de scroll)
-     3. Drawer mobile (menu hambúrguer)
-     4. Scroll suave + fechamento automático do menu ao clicar em link
-     5. Abas do cardápio
-     6. Scroll Reveal (IntersectionObserver)
-     7. Contadores animados (estatísticas da história)
-     8. Galeria + Lightbox
-     9. Formulário de reserva
-    10. Botão "voltar ao topo"
-    11. Ano dinâmico no rodapé
-   ========================================================================== */
 
 document.addEventListener("DOMContentLoaded", () => {
-  /* ---------- 1. PRELOADER ---------- */
-  // Esconde o preloader assim que a página e as imagens principais carregarem.
-  // Um pequeno atraso garante que a animação de entrada seja percebida pelo usuário.
+
   const preloader = document.getElementById("preloader");
 
   function hidePreloader() {
@@ -30,11 +13,8 @@ document.addEventListener("DOMContentLoaded", () => {
     setTimeout(hidePreloader, 500);
   });
 
-  // Fallback: caso o evento "load" demore (ex: imagens externas lentas),
-  // força o fechamento do preloader após um tempo máximo de espera.
   setTimeout(hidePreloader, 3500);
 
-  /* ---------- 2. NAVBAR FIXA — efeito ao rolar a página ---------- */
   const navbar = document.getElementById("navbar");
   const SCROLL_THRESHOLD = 40;
 
@@ -49,7 +29,6 @@ document.addEventListener("DOMContentLoaded", () => {
   updateNavbarState();
   window.addEventListener("scroll", updateNavbarState, { passive: true });
 
-  /* ---------- 3. DRAWER MOBILE ---------- */
   const burgerBtn = document.getElementById("burgerBtn");
   const mobileDrawer = document.getElementById("mobileDrawer");
   const drawerBackdrop = document.getElementById("drawerBackdrop");
@@ -79,21 +58,16 @@ document.addEventListener("DOMContentLoaded", () => {
 
   drawerBackdrop.addEventListener("click", closeDrawer);
 
-  // Fecha o drawer ao clicar em qualquer link de navegação dentro dele
   mobileDrawer.querySelectorAll("a").forEach((link) => {
     link.addEventListener("click", closeDrawer);
   });
 
-  // Fecha o drawer com a tecla ESC (acessibilidade via teclado)
   document.addEventListener("keydown", (e) => {
     if (e.key === "Escape" && mobileDrawer.classList.contains("is-open")) {
       closeDrawer();
     }
   });
 
-  /* ---------- 4. SCROLL SUAVE ---------- */
-  // O scroll suave já é tratado via CSS (scroll-behavior: smooth),
-  // mas garantimos compatibilidade extra para navegadores mais antigos.
   document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
     anchor.addEventListener("click", (e) => {
       const targetId = anchor.getAttribute("href");
@@ -107,7 +81,6 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   });
 
-  /* ---------- 5. ABAS DO CARDÁPIO ---------- */
   const menuTabs = document.querySelectorAll(".menu-tab");
   const menuPanels = document.querySelectorAll(".menu-panel");
 
@@ -115,7 +88,6 @@ document.addEventListener("DOMContentLoaded", () => {
     tab.addEventListener("click", () => {
       const targetTab = tab.getAttribute("data-tab");
 
-      // Atualiza o estado visual e de acessibilidade das abas
       menuTabs.forEach((t) => {
         t.classList.remove("is-active");
         t.setAttribute("aria-selected", "false");
@@ -123,7 +95,6 @@ document.addEventListener("DOMContentLoaded", () => {
       tab.classList.add("is-active");
       tab.setAttribute("aria-selected", "true");
 
-      // Mostra apenas o painel correspondente à aba selecionada
       menuPanels.forEach((panel) => {
         const isTarget = panel.id === `panel-${targetTab}`;
         panel.classList.toggle("is-active", isTarget);
@@ -132,17 +103,13 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   });
 
-  /* ---------- 6. SCROLL REVEAL (IntersectionObserver) ---------- */
-  // Usamos IntersectionObserver em vez de listeners de "scroll" por ser
-  // muito mais leve para a performance — o navegador só nos notifica
-  // quando um elemento realmente entra ou sai da área visível.
   const revealElements = document.querySelectorAll("[data-reveal]");
 
   const revealObserver = new IntersectionObserver(
     (entries) => {
       entries.forEach((entry) => {
         if (entry.isIntersecting) {
-          // Pequeno atraso escalonado para elementos próximos revelarem em cascata
+        
           const delay = entry.target.dataset.revealDelay || 0;
           setTimeout(() => {
             entry.target.classList.add("is-visible");
@@ -158,18 +125,15 @@ document.addEventListener("DOMContentLoaded", () => {
   );
 
   revealElements.forEach((el, index) => {
-    // Escalona levemente itens dentro do mesmo grupo/lista para um efeito em cascata sutil
+  
     el.dataset.revealDelay = (index % 4) * 70;
     revealObserver.observe(el);
   });
 
-  // Rede de segurança: garante que nenhum conteúdo fique invisível permanentemente
-  // caso o IntersectionObserver não dispare para algum elemento (ex: grids muito largos).
   setTimeout(() => {
     revealElements.forEach((el) => el.classList.add("is-visible"));
   }, 4000);
 
-  /* ---------- 7. CONTADORES ANIMADOS (estatísticas da história) ---------- */
   const counters = document.querySelectorAll("[data-counter]");
 
   function animateCounter(el) {
@@ -179,7 +143,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     function tick(now) {
       const progress = Math.min((now - startTime) / duration, 1);
-      // easeOutQuad para uma desaceleração suave e elegante
+    
       const eased = 1 - (1 - progress) * (1 - progress);
       el.textContent = Math.floor(eased * target);
 
@@ -207,7 +171,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
   counters.forEach((counter) => counterObserver.observe(counter));
 
-  /* ---------- 8. GALERIA + LIGHTBOX ---------- */
+
   const galleryItems = document.querySelectorAll(".gallery-item");
   const lightbox = document.getElementById("lightbox");
   const lightboxImg = document.getElementById("lightboxImg");
@@ -245,11 +209,11 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   });
 
-  /* ---------- 9. FORMULÁRIO DE RESERVA ---------- */
+
   const reservaForm = document.getElementById("reservaForm");
   const reservaFeedback = document.getElementById("reservaFeedback");
 
-  // Impede que o usuário selecione uma data no passado
+
   const dataInput = document.getElementById("data");
   if (dataInput) {
     const hoje = new Date().toISOString().split("T")[0];
@@ -259,8 +223,6 @@ document.addEventListener("DOMContentLoaded", () => {
   reservaForm.addEventListener("submit", (e) => {
     e.preventDefault();
 
-    // Validação simples no front-end. Em produção, este formulário deve
-    // ser conectado a um backend, serviço de e-mail ou API de reservas.
     const nome = document.getElementById("nome").value.trim();
     const telefone = document.getElementById("telefone").value.trim();
     const data = document.getElementById("data").value;
@@ -274,8 +236,6 @@ document.addEventListener("DOMContentLoaded", () => {
       return;
     }
 
-    // Simula o envio da reserva. Substitua este bloco pela integração real
-    // (ex: fetch para uma API, envio de e-mail, ou webhook do WhatsApp).
     reservaFeedback.textContent = `Obrigado, ${nome}! Sua reserva para ${pessoas} às ${hora} do dia ${formatarData(data)} foi recebida. Em breve entraremos em contato para confirmar.`;
     reservaFeedback.className = "reserva__feedback is-success";
 
@@ -287,7 +247,6 @@ document.addEventListener("DOMContentLoaded", () => {
     return `${dia}/${mes}/${ano}`;
   }
 
-  /* ---------- 10. BOTÃO "VOLTAR AO TOPO" ---------- */
   const backToTop = document.getElementById("backToTop");
   const BACK_TO_TOP_THRESHOLD = 600;
 
@@ -307,7 +266,6 @@ document.addEventListener("DOMContentLoaded", () => {
     window.scrollTo({ top: 0, behavior: "smooth" });
   });
 
-  /* ---------- 11. ANO DINÂMICO NO RODAPÉ ---------- */
   const anoAtual = document.getElementById("anoAtual");
   if (anoAtual) {
     anoAtual.textContent = new Date().getFullYear();

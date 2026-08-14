@@ -6,21 +6,15 @@
   <title>Royal Barber — Barbearia de Alto Padrão</title>
   <meta name="description" content="Royal Barber: tradição, precisão e estilo. Cortes clássicos e modernos, barba e experiência premium.">
 
-  <!-- ===== FONTES (Google Fonts) ===== -->
-  <!-- Fraunces: serifada de exibição (títulos) | Manrope: sans-serif utilitária (corpo/UI) -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,500;0,9..144,600;0,9..144,700;1,9..144,500&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 
-  <!-- ===== ÍCONES (sem dependências externas pesadas, usamos SVG inline no HTML) ===== -->
 
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-  <!-- ============================================================
-       NAVBAR FIXA
-  ============================================================ -->
   <header class="navbar" id="navbar">
     <div class="navbar__inner container">
 
@@ -44,7 +38,6 @@
         Agendar horário
       </a>
 
-      <!-- Botão hambúrguer (mobile) -->
       <button class="navbar__burger" id="navBurger" aria-label="Abrir menu" aria-expanded="false" aria-controls="navLinks">
         <span></span>
         <span></span>
@@ -53,7 +46,6 @@
     </div>
   </header>
 
-  <!-- Menu mobile (painel deslizante) -->
   <div class="mobile-menu" id="mobileMenu">
     <nav class="mobile-menu__links" aria-label="Navegação mobile">
       <a href="#servicos" class="mobile-menu__link">Serviços</a>
@@ -66,10 +58,6 @@
     </nav>
   </div>
 
-
-  <!-- ============================================================
-       HERO SECTION
-  ============================================================ -->
   <section class="hero" id="topo">
     <!-- Textura de fundo: linhas finas + leve vinheta, criado só em CSS -->
     <div class="hero__bg" aria-hidden="true"></div>
@@ -126,10 +114,6 @@
     </a>
   </section>
 
-
-  <!-- ============================================================
-       SERVIÇOS
-  ============================================================ -->
   <section class="services" id="servicos">
     <div class="container">
       <div class="section-head reveal" data-reveal>
@@ -216,10 +200,6 @@
     </div>
   </section>
 
-
-  <!-- ============================================================
-       GALERIA
-  ============================================================ -->
   <section class="gallery" id="galeria">
     <div class="container">
       <div class="section-head reveal" data-reveal>
@@ -260,10 +240,6 @@
     </figure>
   </div>
 
-
-  <!-- ============================================================
-       EQUIPE
-  ============================================================ -->
   <section class="team" id="equipe">
     <div class="container">
       <div class="section-head reveal" data-reveal>
@@ -334,10 +310,6 @@
     </div>
   </section>
 
-
-  <!-- ============================================================
-       AGENDAMENTO
-  ============================================================ -->
   <section class="booking" id="agendamento">
     <div class="booking__stripe" aria-hidden="true"></div>
     <div class="container booking__container">
@@ -428,10 +400,6 @@
     </div>
   </section>
 
-
-  <!-- ============================================================
-       DEPOIMENTOS
-  ============================================================ -->
   <section class="testimonials" id="depoimentos">
     <div class="container">
       <div class="section-head reveal" data-reveal>
@@ -505,10 +473,6 @@
     </div>
   </section>
 
-
-  <!-- ============================================================
-       FAQ
-  ============================================================ -->
   <section class="faq" id="faq">
     <div class="container container--narrow">
       <div class="section-head reveal" data-reveal>
@@ -572,10 +536,6 @@
     </div>
   </section>
 
-
-  <!-- ============================================================
-       LOCALIZAÇÃO
-  ============================================================ -->
   <section class="location" id="localizacao">
     <div class="container">
       <div class="section-head reveal" data-reveal>
@@ -633,10 +593,6 @@
     </div>
   </section>
 
-
-  <!-- ============================================================
-       BOTÃO FLUTUANTE WHATSAPP
-  ============================================================ -->
   <a
     href="https://wa.me/5511999999999?text=Ol%C3%A1%2C%20gostaria%20de%20agendar%20um%20hor%C3%A1rio%20na%20Royal%20Barber."
     class="whatsapp-float"
@@ -646,10 +602,6 @@
     <svg viewBox="0 0 32 32" fill="currentColor" aria-hidden="true"><path d="M16 2C8.3 2 2 8.3 2 16c0 2.8.8 5.4 2.2 7.6L2 30l6.6-2.1c2.1 1.2 4.6 1.9 7.4 1.9 7.7 0 14-6.3 14-14S23.7 2 16 2zm0 25.6c-2.4 0-4.7-.7-6.6-1.9l-.5-.3-4.6 1.5 1.5-4.5-.3-.5C4.3 20 3.6 18 3.6 16 3.6 9.2 9.2 3.6 16 3.6S28.4 9.2 28.4 16 22.8 27.6 16 27.6zm7.4-9.3c-.4-.2-2.4-1.2-2.8-1.3-.4-.1-.6-.2-.9.2-.3.4-1 1.3-1.3 1.5-.2.3-.5.3-.9.1-1.2-.5-2-1-2.8-2-.7-.8-1.4-1.8-1.6-2.2-.2-.4 0-.6.2-.8.2-.2.4-.5.6-.7.2-.2.3-.4.4-.6.1-.3 0-.5-.1-.7-.1-.2-.7-1.8-1-2.4-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.6.1-.8.4-.3.3-1.1 1-1.1 2.5s1.1 2.9 1.3 3.1c.2.3 2.1 3.2 5.1 4.4 2.9 1.2 2.9.8 3.4.7.5 0 1.7-.7 1.9-1.4.2-.7.2-1.3.2-1.4-.1-.2-.3-.2-.6-.4z"/></svg>
   </a>
 
-
-  <!-- ============================================================
-       RODAPÉ
-  ============================================================ -->
   <footer class="footer">
     <div class="container footer__inner">
 
@@ -704,10 +656,6 @@
     </div>
   </footer>
 
-
-  <!-- ============================================================
-       BOTÃO VOLTAR AO TOPO
-  ============================================================ -->
   <button class="back-to-top" id="backToTop" aria-label="Voltar ao topo">
     <svg viewBox="0 0 24 24" fill="none"><path d="M12 19V5M5 12l7-7 7 7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
   </button>
