@@ -3449,101 +3449,45 @@ img {
 
 }
 
-/* LOGO NAVBAR */
-.navbar .brand .brand__logo {
-    width: 42px !important;
-    height: 42px !important;
-    max-width: 42px !important;
-    max-height: 42px !important;
+/* =========================================
+   LOGO NAVBAR
+========================================= */
 
-    object-fit: contain !important;
-
-    margin: 0 !important;
-    padding: 0 !important;
-
-    position: static !important;
-    transform: none !important;
-}
-
-.navbar .brand {
-    height: 42px;
+.brand {
     display: flex;
     align-items: center;
     gap: 10px;
-    overflow: visible;
+    flex-shrink: 0;
 }
 
-/* =========================================
-   CORREÇÃO DEFINITIVA DA LOGO
-========================================= */
+.brand__logo {
+    display: block;
 
-.navbar .brand {
-    display: flex !important;
-    align-items: center !important;
-    gap: 10px !important;
+    width: 44px;
+    height: 44px;
 
-    height: 48px !important;
-    width: auto !important;
+    object-fit: contain;
 
-    flex-shrink: 0 !important;
+    flex-shrink: 0;
 }
 
-.navbar .brand img,
-.navbar .brand .brand__logo {
-    display: block !important;
-
-    width: 46px !important;
-    height: 46px !important;
-
-    min-width: 46px !important;
-    min-height: 46px !important;
-
-    max-width: 46px !important;
-    max-height: 46px !important;
-
-    object-fit: contain !important;
-
-    margin: 0 !important;
-    padding: 0 !important;
-
-    position: static !important;
-
-    inset: auto !important;
-
-    transform: none !important;
-
-    flex-shrink: 0 !important;
+.brand__text {
+    font-family: var(--font-display);
+    font-size: 0.95rem;
+    font-weight: 600;
+    color: var(--text);
+    white-space: nowrap;
 }
-
-.navbar__container {
-    height: 82px !important;
-    min-height: 82px !important;
-    max-height: 82px !important;
-
-    overflow: visible !important;
-}
-
-
-/* MOBILE */
 
 @media (max-width: 700px) {
 
-    .navbar .brand img,
-    .navbar .brand .brand__logo {
-        width: 40px !important;
-        height: 40px !important;
-
-        min-width: 40px !important;
-        min-height: 40px !important;
-
-        max-width: 40px !important;
-        max-height: 40px !important;
+    .brand__logo {
+        width: 40px;
+        height: 40px;
     }
 
-    .navbar__container {
-        height: 72px !important;
-        min-height: 72px !important;
-        max-height: 72px !important;
+    .brand__text {
+        display: none;
     }
 
 }
