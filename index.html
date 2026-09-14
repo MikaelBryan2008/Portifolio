@@ -1,241 +1,1702 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Mikael Bryan — Desenvolvedor Web</title>
-  <meta name="description" content="Portfólio de Mikael Bryan, desenvolvedor front-end especializado em interfaces modernas e responsivas.">
+    <meta charset="UTF-8">
 
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
 
-  <link rel="stylesheet" href="style.css">
+    <title>
+        Mikael Bryan | Desenvolvedor de Software
+    </title>
+
+    <meta
+        name="description"
+        content="Portfólio de Mikael Bryan, desenvolvedor de software e estudante de Engenharia da Computação."
+    >
+
+    <meta
+        name="author"
+        content="Mikael Bryan"
+    >
+
+    <meta
+        name="theme-color"
+        content="#070A10"
+    >
+
+    <link
+        rel="preconnect"
+        href="https://fonts.googleapis.com"
+    >
+
+    <link
+        rel="preconnect"
+        href="https://fonts.gstatic.com"
+        crossorigin
+    >
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@500;600;700&display=swap"
+        rel="stylesheet"
+    >
+
+    <link
+        rel="stylesheet"
+        href="style.css"
+    >
 </head>
+
+
 <body>
 
-  <header class="navbar" id="navbar">
-    <nav class="navbar__inner">
-      <a href="#hero" class="navbar__logo">
-        <img src="imagens/mk.png" alt="MK DEV" class="navbar__logo-img">
-        <span class="navbar__logo-text">MK DEV</span>
-      </a>
+    <!-- ========================================
+         BACKGROUND
+    ========================================= -->
 
-      <ul class="navbar__links">
-        <li><a href="#hero" class="navbar__link">Início</a></li>
-        <li><a href="#projetos" class="navbar__link">Projetos</a></li>
-        <li><a href="#sobre" class="navbar__link">Sobre</a></li>
-        <li><a href="#contato" class="navbar__link">Contato</a></li>
-      </ul>
+    <div
+        class="page-glow page-glow--one"
+        aria-hidden="true"
+    ></div>
 
-      <a href="#contato" class="btn btn--small btn--primary navbar__cta">Falar comigo</a>
+    <div
+        class="page-glow page-glow--two"
+        aria-hidden="true"
+    ></div>
 
-      <button class="navbar__toggle" id="navToggle" aria-label="Abrir menu" aria-expanded="false">
-        <span></span>
-        <span></span>
-        <span></span>
-      </button>
-    </nav>
-  </header>
 
-  <div class="mobile-menu" id="mobileMenu">
-    <ul class="mobile-menu__links">
-      <li><a href="#hero" class="mobile-menu__link">Início</a></li>
-      <li><a href="#projetos" class="mobile-menu__link">Projetos</a></li>
-      <li><a href="#sobre" class="mobile-menu__link">Sobre</a></li>
-      <li><a href="#contato" class="mobile-menu__link">Contato</a></li>
-    </ul>
-  </div>
+    <!-- ========================================
+         NAVBAR
+    ========================================= -->
 
-  <main>
+    <header
+        class="navbar"
+        id="navbar"
+    >
 
-    <section class="hero" id="hero">
-    
-      <div class="hero__grid" aria-hidden="true"></div>
+        <div class="navbar__container">
 
-      <div class="hero__content">
-        <p class="hero__eyebrow fade-up">Desenvolvedor Web</p>
+            <a
+                href="#inicio"
+                class="brand"
+                aria-label="Voltar ao início"
+            >
 
-        <h1 class="hero__title fade-up">
-          Criando sites modernos, responsivos e com foco em desempenho.
-        </h1>
+            <img
+              src="imagens/mk.png"
+              alt="Logo Mikael Bryan"
+              class="brand__logo"
+            >
 
-        <p class="hero__subtitle fade-up">
-          Landing Pages, Sites Institucionais e Portfólios desenvolvidos com foco em desempenho, 
-          responsividade e um design que transmite confiança desde o primeiro acesso..
-        </p>
+            <span class="brand__text">
+              Mikael Bryan
+            </span>
 
-        <div class="hero__actions fade-up">
-          <a href="#projetos" class="btn btn--primary">
-            Ver Projetos
-            <span class="btn__arrow">→</span>
-          </a>
-          <a href="#contato" class="btn btn--ghost">Entrar em contato</a>
+
+            <nav
+                class="navbar__nav"
+                aria-label="Navegação principal"
+            >
+
+                <a
+                    href="#inicio"
+                    class="navbar__link"
+                >
+                    Início
+                </a>
+
+                <a
+                    href="#projetos"
+                    class="navbar__link"
+                >
+                    Projetos
+                </a>
+
+                <a
+                    href="#sobre"
+                    class="navbar__link"
+                >
+                    Sobre
+                </a>
+
+                <a
+                    href="#formacao"
+                    class="navbar__link"
+                >
+                    Formação
+                </a>
+
+                <a
+                    href="#contato"
+                    class="navbar__link"
+                >
+                    Contato
+                </a>
+
+            </nav>
+
+
+            <a
+                href="https://github.com/MikaelBryan2008"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="btn btn--outline navbar__github"
+            >
+                GitHub ↗
+            </a>
+
+
+            <button
+                class="navbar__toggle"
+                id="navToggle"
+                aria-label="Abrir menu"
+                aria-expanded="false"
+            >
+
+                <span></span>
+                <span></span>
+                <span></span>
+
+            </button>
+
         </div>
-      </div>
 
-    
-      <a href="#projetos" class="hero__scroll-hint" aria-label="Rolar para projetos">
-        <span class="hero__scroll-line"></span>
-        <span class="hero__scroll-text">Scroll</span>
-      </a>
-    </section>
+    </header>
 
-    
-    <section class="projects" id="projetos">
-      <div class="section-header fade-up">
-        <p class="section-header__eyebrow">Trabalhos selecionados</p>
-        <h2 class="section-header__title">Projetos</h2>
-        <p class="section-header__subtitle">
-          Alguns projetos desenvolvidos para demonstrar diferentes estilos e tipos de site. 
-          Cada um foi pensado para representar um segmento diferente.
-        </p>
-      </div>
 
-      <div class="projects__grid">
+    <!-- ========================================
+         MOBILE MENU
+    ========================================= -->
 
-        <article class="card fade-up">
-          <div class="card__image-wrap">
-            <img
-              src="imagens/academia1.png"
-              alt="Tela inicial da landing page de academia, mostrando pessoa treinando em ambiente fitness"
-              class="card__image"
-              loading="lazy"
+    <div
+        class="mobile-menu"
+        id="mobileMenu"
+    >
+
+        <div class="mobile-menu__content">
+
+            <a
+                href="#inicio"
+                class="mobile-menu__link"
             >
-            <span class="card__tag">Fitness</span>
-          </div>
+                Início
+            </a>
 
-          <div class="card__body">
-            <h3 class="card__title">🏋️ Academia POWERFIT </h3>
-            <p class="card__description">
-              Landing Page desenvolvida para academias, com apresentação de planos, 
-              depoimentos de alunos e formulário de matrícula. 
-              Um layout pensado para transmitir energia e incentivar novos cadastros.
-            </p>
-
-            <div class="card__actions">
-              <a href="Academia/index.html" class="btn btn--small btn--primary" target="_blank" rel="noopener noreferrer">Ver Projeto</a>
-              <a href="#" class="btn btn--small btn--ghost" target="_blank" rel="noopener noreferrer">
-                GitHub
-              </a>
-            </div>
-          </div>
-        </article>
-
-        <article class="card fade-up">
-          <div class="card__image-wrap">
-            <img
-              src="imagens/restaurante1.png"
-              alt="Mesa de restaurante italiano com massa fresca servida, ambiente elegante"
-              class="card__image"
-              loading="lazy"
+            <a
+                href="#projetos"
+                class="mobile-menu__link"
             >
-            <span class="card__tag">Gastronomia</span>
-          </div>
+                Projetos
+            </a>
 
-          <div class="card__body">
-            <h3 class="card__title">🍝 Restaurante Bella Massa </h3>
-            <p class="card__description">
-              Site desenvolvido para um restaurante italiano, destacando o cardápio, 
-              a história da marca e os principais diferenciais. Conta com ambiente elegante, 
-              galeria de imagens e informações para reservas..
-            </p>
-
-            <div class="card__actions">
-              <a href="restaurante/index.html" class="btn btn--small btn--primary" target="_blank" rel="noopener noreferrer">Ver Projeto</a>
-              <a href="#" class="btn btn--small btn--ghost" target="_blank" rel="noopener noreferrer">
-                GitHub
-              </a>
-            </div>
-          </div>
-        </article>
-
-        <article class="card fade-up">
-          <div class="card__image-wrap">
-            <img
-              src="imagens/barbearia1.png"
-              alt="Interior de barbearia moderna com cadeiras e espelhos"
-              class="card__image"
-              loading="lazy"
+            <a
+                href="#sobre"
+                class="mobile-menu__link"
             >
-            <span class="card__tag">Lifestyle</span>
-          </div>
+                Sobre
+            </a>
 
-          <div class="card__body">
-            <h3 class="card__title">💈 Barbearia ROYALBARBER </h3>
-            <p class="card__description">
-              Landing Page criada para uma barbearia premium, 
-              com apresentação dos serviços, galeria de cortes, informações da equipe e botão de agendamento via WhatsApp.
-            </p>
+            <a
+                href="#formacao"
+                class="mobile-menu__link"
+            >
+                Formação
+            </a>
 
-            <div class="card__actions">
-              <a href="barbearia/index.html" class="btn btn--small btn--primary" target="_blank">Ver Projeto</a>
-              <a href="#" class="btn btn--small btn--ghost" target="_blank" rel="noopener noreferrer">
-                GitHub
-              </a>
-            </div>
-          </div>
-        </article>
+            <a
+                href="#contato"
+                class="mobile-menu__link"
+            >
+                Contato
+            </a>
 
-      </div>
-    </section>
-
-    <section class="about" id="sobre">
-      <div class="about__content fade-up">
-        <p class="section-header__eyebrow">Sobre mim</p>
-        <h2 class="about__title">
-          Crio sites personalizados para quem quer mostrar seu trabalho ou vender pela internet.
-        </h2>
-        <p class="about__text">
-          Olá! Me chamo Mikael Bryan e desenvolvo sites modernos, rápidos e responsivos. 
-          Meu objetivo é criar projetos que transmitam profissionalismo e ofereçam uma boa experiência para quem acessa.
-          Cada site é desenvolvido de forma personalizada, de acordo com a necessidade de cada cliente.
-        </p>
-
-        <div class="about__skills">
-          <span class="skill-pill">HTML5</span>
-          <span class="skill-pill">CSS3</span>
-          <span class="skill-pill">JavaScript</span>
-          <span class="skill-pill">Responsive Design</span>
-          <span class="skill-pill">Git &amp; GitHub</span>
-          <span class="skill-pill">UI/UX Principles</span>
         </div>
-      </div>
-    </section>
-  </main>
 
-  <footer class="footer" id="contato">
-    <div class="footer__content">
-      <div class="footer__main">
-        <h2 class="footer__title">Gostou de algum projeto? Entre em contato e vamos conversar sobre a sua ideia.</h2>
-        <p class="footer__subtitle">
-          Obrigado pela visita! Espero que este portfólio tenha mostrado um pouco do meu trabalho. 
-          Se quiser criar um site para o seu negócio, será um prazer conversar com você.
-        </p>
-        <a href="https://wa.me/5511922229406?text=Olá!%20Vi%20seu%20portfólio%20e%20gostaria%20de%20fazer%20um%20orçamento." class="btn btn--primary footer__cta">
-          💬 Solicitar orçamento
-        </a>
-      </div>
-
-      <div class="footer__links">
-        <a href="https://github.com/MikaelBryan2008" target="_blank" rel="noopener noreferrer" class="footer__link">
-          GitHub
-        </a>
-        <a href="https://wa.me/5511922229406?text=Olá!%20Vi%20seu%20portfólio%20e%20gostaria%20de%20fazer%20um%20orçamento." target="_blank" rel="noopener noreferrer" class="footer__link">
-          Whatsapp
-        </a>
-        <a href="mailto:mikaelbryan2008@gmail.com" class="footer__link">
-          E-mail
-        </a>
-      </div>
     </div>
 
-    <div class="footer__bottom">
-      <p>&copy; <span id="currentYear"></span> MK DEV. Todos os direitos reservados.</p>
-      <button class="back-to-top" id="backToTop" aria-label="Voltar ao topo">↑</button>
-    </div>
-  </footer>
 
-  <script src="script.js"></script>
+    <main>
+
+
+        <!-- ========================================
+             HERO
+        ========================================= -->
+
+        <section
+            class="hero"
+            id="inicio"
+        >
+
+            <div class="hero__grid"></div>
+
+
+            <div class="container hero__container">
+
+
+                <div class="hero__content">
+
+                    <div class="hero__status reveal">
+
+                        <span class="hero__status-dot"></span>
+
+                        Aberto a oportunidades em tecnologia
+
+                    </div>
+
+
+                    <p class="hero__hello reveal">
+                        Olá, eu sou
+                    </p>
+
+
+                    <h1 class="hero__title reveal">
+
+                        Mikael
+                        <span>Bryan.</span>
+
+                    </h1>
+
+
+                    <h2 class="hero__role reveal">
+
+                        Desenvolvedor de Software
+
+                    </h2>
+
+
+                    <p class="hero__description reveal">
+
+                        Estudante de Engenharia da Computação e
+                        Técnico em Desenvolvimento de Sistemas.
+
+                        Desenvolvo aplicações e interfaces web,
+                        transformando ideias em experiências digitais
+                        modernas, responsivas e funcionais.
+
+                    </p>
+
+
+                    <div class="hero__actions reveal">
+
+                        <a
+                            href="#projetos"
+                            class="btn btn--primary"
+                        >
+
+                            Ver meus projetos
+
+                            <span>
+                                ↓
+                            </span>
+
+                        </a>
+
+
+                        <a
+                            href="#contato"
+                            class="btn btn--outline"
+                        >
+
+                            Entrar em contato
+
+                        </a>
+
+                    </div>
+
+
+                    <div class="hero__social reveal">
+
+                        <a
+                            href="https://github.com/MikaelBryan2008"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                        >
+                            GitHub ↗
+                        </a>
+
+
+                        <a
+                            href="https://www.linkedin.com/in/mikael-bryan-51a531388/"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                        >
+                            LinkedIn ↗
+                        </a>
+
+
+                        <a
+                            href="mailto:mikaelbryan2008@gmail.com"
+                        >
+                            E-mail ↗
+                        </a>
+
+                    </div>
+
+                </div>
+
+
+                <div class="hero__visual reveal">
+
+
+                    <div class="code-window">
+
+
+                        <div class="code-window__top">
+
+                            <div class="code-window__dots">
+
+                                <span></span>
+                                <span></span>
+                                <span></span>
+
+                            </div>
+
+                            <span class="code-window__file">
+                                portfolio.js
+                            </span>
+
+                        </div>
+
+
+                        <div class="code-window__content">
+
+                            <p>
+                                <span class="code-purple">const</span>
+                                <span class="code-blue"> developer</span>
+                                =
+                                {
+                            </p>
+
+                            <p class="code-indent">
+
+                                name:
+                                <span class="code-green">
+                                    "Mikael Bryan"
+                                </span>,
+
+                            </p>
+
+                            <p class="code-indent">
+
+                                role:
+                                <span class="code-green">
+                                    "Software Developer"
+                                </span>,
+
+                            </p>
+
+                            <p class="code-indent">
+
+                                education:
+                                <span class="code-green">
+                                    "Computer Engineering"
+                                </span>,
+
+                            </p>
+
+                            <p class="code-indent">
+
+                                stack:
+                                [
+
+                                <span class="code-green">
+                                    "JavaScript",
+                                    "Python",
+                                    "SQL"
+                                </span>
+
+                                ],
+
+                            </p>
+
+                            <p class="code-indent">
+
+                                status:
+                                <span class="code-green">
+                                    "building..."
+                                </span>
+
+                            </p>
+
+                            <p>
+                                };
+                            </p>
+
+                        </div>
+
+
+                        <div class="code-window__footer">
+
+                            <span>
+                                ● main
+                            </span>
+
+                            <span>
+                                UTF-8
+                            </span>
+
+                            <span>
+                                JavaScript
+                            </span>
+
+                        </div>
+
+
+                    </div>
+
+
+                    <div class="hero__floating-card hero__floating-card--projects">
+
+                        <strong>
+                            6
+                        </strong>
+
+                        <span>
+                            Projetos
+                        </span>
+
+                    </div>
+
+
+                    <div class="hero__floating-card hero__floating-card--focus">
+
+                        <span class="floating-icon">
+                            &lt;/&gt;
+                        </span>
+
+                        <span>
+                            Sempre evoluindo
+                        </span>
+
+                    </div>
+
+
+                </div>
+
+            </div>
+
+
+            <a
+                href="#projetos"
+                class="hero__scroll"
+                aria-label="Ir para projetos"
+            >
+
+                <span>
+                    Scroll
+                </span>
+
+                <div></div>
+
+            </a>
+
+        </section>
+
+
+        <!-- ========================================
+             STACK
+        ========================================= -->
+
+        <section class="stack">
+
+            <div class="container">
+
+
+                <div class="stack__header reveal">
+
+                    <span>
+                        Tecnologias que utilizo
+                    </span>
+
+                </div>
+
+
+                <div class="stack__items reveal">
+
+                    <div class="stack__item">
+                        HTML5
+                    </div>
+
+                    <div class="stack__item">
+                        CSS3
+                    </div>
+
+                    <div class="stack__item">
+                        JavaScript
+                    </div>
+
+                    <div class="stack__item">
+                        Python
+                    </div>
+
+                    <div class="stack__item">
+                        SQL
+                    </div>
+
+                    <div class="stack__item">
+                        Git
+                    </div>
+
+                    <div class="stack__item">
+                        GitHub
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ========================================
+             PROJECTS
+        ========================================= -->
+
+        <section
+            class="projects section"
+            id="projetos"
+        >
+
+            <div class="container">
+
+
+                <div class="section-heading reveal">
+
+                    <div>
+
+                        <span class="section-heading__eyebrow">
+                            PORTFÓLIO
+                        </span>
+
+                        <h2>
+                            Projetos em destaque
+                        </h2>
+
+                    </div>
+
+
+                    <p>
+
+                        Projetos pessoais, trabalhos desenvolvidos
+                        para marcas e estudos que representam minha
+                        evolução como desenvolvedor.
+
+                    </p>
+
+                </div>
+
+
+                <!-- FILTROS -->
+
+                <div class="project-filters reveal">
+
+                    <button
+                        class="filter-button is-active"
+                        data-filter="all"
+                    >
+                        Todos
+                    </button>
+
+                    <button
+                        class="filter-button"
+                        data-filter="real"
+                    >
+                        Projetos reais
+                    </button>
+
+                    <button
+                        class="filter-button"
+                        data-filter="personal"
+                    >
+                        Pessoais
+                    </button>
+
+                    <button
+                        class="filter-button"
+                        data-filter="study"
+                    >
+                        Estudos
+                    </button>
+
+                </div>
+
+
+                <div class="projects__grid">
+
+
+                    <!-- FITLOVE -->
+
+                    <article
+                        class="project-card project-card--featured reveal"
+                        data-category="personal"
+                        data-project="fitlove"
+                    >
+
+                        <button
+                            class="project-card__click"
+                            aria-label="Abrir detalhes do projeto FitLove"
+                        ></button>
+
+
+                        <div class="project-card__image">
+
+                            <img
+                                src="imagens/fitlove.png"
+                                alt="Projeto FitLove"
+                                loading="lazy"
+                            >
+
+                            <div class="project-card__overlay"></div>
+
+
+                            <span class="project-card__type">
+                                PROJETO PESSOAL
+                            </span>
+
+                        </div>
+
+
+                        <div class="project-card__content">
+
+                            <div class="project-card__top">
+
+                                <span>
+                                    01
+                                </span>
+
+                                <span>
+                                    WEB APP
+                                </span>
+
+                            </div>
+
+
+                            <h3>
+                                FitLove
+                            </h3>
+
+
+                            <p>
+
+                                Aplicação web criada para organização
+                                e acompanhamento de treinos, progresso
+                                semanal e rotina de exercícios.
+
+                            </p>
+
+
+                            <div class="project-card__tech">
+
+                                <span>
+                                    HTML
+                                </span>
+
+                                <span>
+                                    CSS
+                                </span>
+
+                                <span>
+                                    JavaScript
+                                </span>
+
+                                <span>
+                                    LocalStorage
+                                </span>
+
+                            </div>
+
+
+                            <div class="project-card__actions">
+
+                              <button
+                                class="project-card__more"
+                                type="button"
+                            >
+
+                                Explorar projeto
+
+                                <span>
+                                    ↗
+                                </span>
+
+                            </button>
+    
+
+                        </div>
+
+                    </article>
+
+
+                    <!-- VOLTZ -->
+
+                    <article
+                        class="project-card project-card--featured reveal"
+                        data-category="real"
+                        data-project="voltz"
+                    >
+
+                        <button
+                            class="project-card__click"
+                            aria-label="Abrir detalhes do projeto VOLTZ3D"
+                        ></button>
+
+
+                        <div class="project-card__image">
+
+                            <img
+                                src="imagens/voltz3d.png"
+                                alt="Projeto VOLTZ3D"
+                                loading="lazy"
+                            >
+
+                            <div class="project-card__overlay"></div>
+
+
+                            <span class="project-card__type">
+                                PROJETO REAL
+                            </span>
+
+                        </div>
+
+
+                        <div class="project-card__content">
+
+                            <div class="project-card__top">
+
+                                <span>
+                                    02
+                                </span>
+
+                                <span>
+                                    WEB
+                                </span>
+
+                            </div>
+
+
+                            <h3>
+                                VOLTZ3D
+                            </h3>
+
+
+                            <p>
+
+                                Interface desenvolvida para uma marca
+                                de impressão 3D, apresentando produtos,
+                                personalizações, trabalhos e canais
+                                de contato.
+
+                            </p>
+
+
+                            <div class="project-card__tech">
+
+                                <span>
+                                    HTML
+                                </span>
+
+                                <span>
+                                    CSS
+                                </span>
+
+                                <span>
+                                    JavaScript
+                                </span>
+
+                            </div>
+
+
+                            <button
+                                class="project-card__more"
+                                type="button"
+                            >
+
+                                Explorar projeto
+
+                                <span>
+                                    ↗
+                                </span>
+
+                            </button>
+
+                        </div>
+
+                    </article>
+
+
+                    <!-- LUMERA -->
+
+                    <article
+                        class="project-card reveal"
+                        data-category="real"
+                        data-project="lumera"
+                    >
+
+                        <button
+                            class="project-card__click"
+                            aria-label="Abrir detalhes do projeto Luméra"
+                        ></button>
+
+
+                        <div class="project-card__image">
+
+                            <img
+                                src="imagens/lumera.png"
+                                alt="Projeto Luméra"
+                                loading="lazy"
+                            >
+
+                            <div class="project-card__overlay"></div>
+
+
+                            <span class="project-card__type">
+                                PROJETO REAL
+                            </span>
+
+                        </div>
+
+
+                        <div class="project-card__content">
+
+                            <div class="project-card__top">
+
+                                <span>
+                                    03
+                                </span>
+
+                                <span>
+                                    BRAND WEBSITE
+                                </span>
+
+                            </div>
+
+
+                            <h3>
+                                Luméra
+                            </h3>
+
+
+                            <p>
+
+                                Interface digital criada para uma marca
+                                de beleza e autocuidado, centralizando
+                                loja, redes sociais e contato.
+
+                            </p>
+
+
+                            <div class="project-card__tech">
+
+                                <span>
+                                    HTML
+                                </span>
+
+                                <span>
+                                    CSS
+                                </span>
+
+                                <span>
+                                    JavaScript
+                                </span>
+
+                            </div>
+
+
+                            <button
+                                class="project-card__more"
+                                type="button"
+                            >
+
+                                Explorar projeto
+
+                                <span>
+                                    ↗
+                                </span>
+
+                            </button>
+
+                        </div>
+
+                    </article>
+
+
+                    <!-- POWERFIT -->
+
+                    <article
+                        class="project-card reveal"
+                        data-category="study"
+                        data-project="powerfit"
+                    >
+
+                        <button
+                            class="project-card__click"
+                            aria-label="Abrir detalhes do projeto PowerFit"
+                        ></button>
+
+
+                        <div class="project-card__image">
+
+                            <img
+                                src="imagens/academia1.png"
+                                alt="Projeto PowerFit"
+                                loading="lazy"
+                            >
+
+                            <div class="project-card__overlay"></div>
+
+
+                            <span class="project-card__type">
+                                PROJETO DE ESTUDO
+                            </span>
+
+                        </div>
+
+
+                        <div class="project-card__content">
+
+                            <div class="project-card__top">
+
+                                <span>
+                                    04
+                                </span>
+
+                                <span>
+                                    LANDING PAGE
+                                </span>
+
+                            </div>
+
+
+                            <h3>
+                                PowerFit
+                            </h3>
+
+
+                            <p>
+
+                                Landing page para academia com
+                                apresentação de estrutura, planos,
+                                depoimentos e chamada para matrícula.
+
+                            </p>
+
+
+                            <div class="project-card__tech">
+
+                                <span>
+                                    HTML
+                                </span>
+
+                                <span>
+                                    CSS
+                                </span>
+
+                                <span>
+                                    JavaScript
+                                </span>
+
+                            </div>
+
+
+                            <button
+                                class="project-card__more"
+                                type="button"
+                            >
+
+                                Explorar projeto
+
+                                <span>
+                                    ↗
+                                </span>
+
+                            </button>
+
+                        </div>
+
+                    </article>
+
+
+                    <!-- BELLA MASSA -->
+
+                    <article
+                        class="project-card reveal"
+                        data-category="study"
+                        data-project="bellamassa"
+                    >
+
+                        <button
+                            class="project-card__click"
+                            aria-label="Abrir detalhes do projeto Bella Massa"
+                        ></button>
+
+
+                        <div class="project-card__image">
+
+                            <img
+                                src="imagens/restaurante1.png"
+                                alt="Projeto Bella Massa"
+                                loading="lazy"
+                            >
+
+                            <div class="project-card__overlay"></div>
+
+
+                            <span class="project-card__type">
+                                PROJETO DE ESTUDO
+                            </span>
+
+                        </div>
+
+
+                        <div class="project-card__content">
+
+                            <div class="project-card__top">
+
+                                <span>
+                                    05
+                                </span>
+
+                                <span>
+                                    INSTITUCIONAL
+                                </span>
+
+                            </div>
+
+
+                            <h3>
+                                Bella Massa
+                            </h3>
+
+
+                            <p>
+
+                                Website institucional para restaurante,
+                                apresentando cardápio, ambiente,
+                                história e informações para reservas.
+
+                            </p>
+
+
+                            <div class="project-card__tech">
+
+                                <span>
+                                    HTML
+                                </span>
+
+                                <span>
+                                    CSS
+                                </span>
+
+                                <span>
+                                    JavaScript
+                                </span>
+
+                            </div>
+
+
+                            <button
+                                class="project-card__more"
+                                type="button"
+                            >
+
+                                Explorar projeto
+
+                                <span>
+                                    ↗
+                                </span>
+
+                            </button>
+
+                        </div>
+
+                    </article>
+
+
+                    <!-- ROYAL -->
+
+                    <article
+                        class="project-card reveal"
+                        data-category="study"
+                        data-project="royal"
+                    >
+
+                        <button
+                            class="project-card__click"
+                            aria-label="Abrir detalhes do projeto Royal Barber"
+                        ></button>
+
+
+                        <div class="project-card__image">
+
+                            <img
+                                src="imagens/barbearia1.png"
+                                alt="Projeto Royal Barber"
+                                loading="lazy"
+                            >
+
+                            <div class="project-card__overlay"></div>
+
+
+                            <span class="project-card__type">
+                                PROJETO DE ESTUDO
+                            </span>
+
+                        </div>
+
+
+                        <div class="project-card__content">
+
+                            <div class="project-card__top">
+
+                                <span>
+                                    06
+                                </span>
+
+                                <span>
+                                    LANDING PAGE
+                                </span>
+
+                            </div>
+
+
+                            <h3>
+                                Royal Barber
+                            </h3>
+
+
+                            <p>
+
+                                Landing page de barbearia com serviços,
+                                equipe, galeria e agendamento através
+                                do WhatsApp.
+
+                            </p>
+
+
+                            <div class="project-card__tech">
+
+                                <span>
+                                    HTML
+                                </span>
+
+                                <span>
+                                    CSS
+                                </span>
+
+                                <span>
+                                    JavaScript
+                                </span>
+
+                            </div>
+
+
+                            <button
+                                class="project-card__more"
+                                type="button"
+                            >
+
+                                Explorar projeto
+
+                                <span>
+                                    ↗
+                                </span>
+
+                            </button>
+
+                        </div>
+
+                    </article>
+
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ========================================
+             ABOUT
+        ========================================= -->
+
+        <section
+            class="about section"
+            id="sobre"
+        >
+
+            <div class="container about__grid">
+
+
+                <div class="about__number reveal">
+
+                    <span>
+                        02
+                    </span>
+
+                </div>
+
+
+                <div class="about__content reveal">
+
+                    <span class="section-heading__eyebrow">
+                        SOBRE MIM
+                    </span>
+
+
+                    <h2>
+
+                        Tecnologia para transformar
+                        ideias em soluções.
+
+                    </h2>
+
+
+                    <p>
+
+                        Sou Mikael Bryan, desenvolvedor de software
+                        em formação, estudante de Engenharia da
+                        Computação e Técnico em Desenvolvimento
+                        de Sistemas.
+
+                    </p>
+
+
+                    <p>
+
+                        Minha experiência com desenvolvimento começou
+                        através da criação de interfaces web e projetos
+                        práticos. Atualmente continuo expandindo meus
+                        conhecimentos em JavaScript, Python, banco de
+                        dados, Git e desenvolvimento de aplicações.
+
+                    </p>
+
+
+                    <p>
+
+                        Busco uma oportunidade profissional na área de
+                        tecnologia onde possa continuar aprendendo,
+                        contribuindo com projetos reais e evoluindo
+                        como desenvolvedor.
+
+                    </p>
+
+
+                    <div class="about__highlights">
+
+                        <div>
+
+                            <strong>
+                                6+
+                            </strong>
+
+                            <span>
+                                Projetos desenvolvidos
+                            </span>
+
+                        </div>
+
+
+                        <div>
+
+                            <strong>
+                                7+
+                            </strong>
+
+                            <span>
+                                Tecnologias e ferramentas
+                            </span>
+
+                        </div>
+
+
+                        <div>
+
+                            <strong>
+                                2026
+                            </strong>
+
+                            <span>
+                                Engenharia da Computação
+                            </span>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ========================================
+             EDUCATION
+        ========================================= -->
+
+        <section
+            class="education section"
+            id="formacao"
+        >
+
+            <div class="container">
+
+
+                <div class="section-heading reveal">
+
+                    <div>
+
+                        <span class="section-heading__eyebrow">
+                            TRAJETÓRIA
+                        </span>
+
+                        <h2>
+                            Formação
+                        </h2>
+
+                    </div>
+
+                </div>
+
+
+                <div class="education__timeline">
+
+
+                    <article class="education-card reveal">
+
+                        <div class="education-card__year">
+                            2026
+                        </div>
+
+
+                        <div>
+
+                            <span class="education-card__status">
+                                EM ANDAMENTO
+                            </span>
+
+
+                            <h3>
+                                Engenharia da Computação
+                            </h3>
+
+
+                            <p>
+                                Centro Universitário das Américas — FAM
+                            </p>
+
+                        </div>
+
+                    </article>
+
+
+                    <article class="education-card reveal">
+
+                        <div class="education-card__year">
+                            Concluído
+                        </div>
+
+
+                        <div>
+
+                            <span class="education-card__status">
+                                FORMAÇÃO TÉCNICA
+                            </span>
+
+
+                            <h3>
+                                Técnico em Desenvolvimento de Sistemas
+                            </h3>
+
+
+                            <p>
+                                ETEC Rio Grande da Serra
+                            </p>
+
+                        </div>
+
+                    </article>
+
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ========================================
+             CONTACT
+        ========================================= -->
+
+        <section
+            class="contact section"
+            id="contato"
+        >
+
+            <div class="container">
+
+
+                <div class="contact__box reveal">
+
+                    <div>
+
+                        <span class="section-heading__eyebrow">
+                            CONTATO
+                        </span>
+
+
+                        <h2>
+
+                            Vamos construir
+                            algo interessante?
+
+                        </h2>
+
+
+                        <p>
+
+                            Estou aberto a oportunidades profissionais,
+                            projetos e conexões na área de tecnologia.
+
+                        </p>
+
+                    </div>
+
+
+                    <div class="contact__actions">
+
+
+                        <a
+                            href="mailto:mikaelbryan2008@gmail.com"
+                            class="contact-link"
+                        >
+
+                            <span>
+                                E-mail
+                            </span>
+
+                            <strong>
+                                mikaelbryan2008@gmail.com
+                            </strong>
+
+                            <span class="contact-link__arrow">
+                                ↗
+                            </span>
+
+                        </a>
+
+
+                        <a
+                            href="https://www.linkedin.com/in/mikael-bryan-51a531388/"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            class="contact-link"
+                        >
+
+                            <span>
+                                LinkedIn
+                            </span>
+
+                            <strong>
+                                Mikael Bryan
+                            </strong>
+
+                            <span class="contact-link__arrow">
+                                ↗
+                            </span>
+
+                        </a>
+
+
+                        <a
+                            href="https://github.com/MikaelBryan2008"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            class="contact-link"
+                        >
+
+                            <span>
+                                GitHub
+                            </span>
+
+                            <strong>
+                                @MikaelBryan2008
+                            </strong>
+
+                            <span class="contact-link__arrow">
+                                ↗
+                            </span>
+
+                        </a>
+
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+    </main>
+
+
+    <!-- ========================================
+         FOOTER
+    ========================================= -->
+
+    <footer class="footer">
+
+        <div class="container footer__container">
+
+
+            <div>
+
+                <strong>
+                    Mikael Bryan
+                </strong>
+
+                <p>
+                    Desenvolvedor de Software
+                </p>
+
+            </div>
+
+
+            <p>
+
+                ©
+                <span id="currentYear"></span>
+                Mikael Bryan
+
+            </p>
+
+
+            <button
+                class="back-to-top"
+                id="backToTop"
+                aria-label="Voltar ao topo"
+            >
+                ↑
+            </button>
+
+        </div>
+
+    </footer>
+
+
+    <!-- ========================================
+         PROJECT MODAL
+    ========================================= -->
+
+    <div
+        class="project-modal"
+        id="projectModal"
+        aria-hidden="true"
+    >
+
+        <div
+            class="project-modal__backdrop"
+            data-close-modal
+        ></div>
+
+
+        <div
+            class="project-modal__dialog"
+            role="dialog"
+            aria-modal="true"
+            aria-labelledby="modalTitle"
+        >
+
+
+            <button
+                class="project-modal__close"
+                id="modalClose"
+                aria-label="Fechar projeto"
+            >
+                ×
+            </button>
+
+
+            <div class="project-modal__image">
+
+                <img
+                    id="modalImage"
+                    src=""
+                    alt=""
+                >
+
+            </div>
+
+
+            <div class="project-modal__content">
+
+
+                <div class="project-modal__meta">
+
+                    <span id="modalType"></span>
+
+                    <span id="modalNumber"></span>
+
+                </div>
+
+
+                <h2 id="modalTitle"></h2>
+
+
+                <p id="modalDescription"></p>
+
+
+                <div
+                    class="project-modal__tech"
+                    id="modalTech"
+                ></div>
+
+
+                <div class="project-modal__actions">
+
+                    <a
+                        href="#"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        class="btn btn--primary"
+                        id="modalProject"
+                    >
+
+                        Ver projeto ↗
+
+                    </a>
+
+
+                    <a
+                        href="#"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        class="btn btn--outline"
+                        id="modalGithub"
+                    >
+
+                        Ver código ↗
+
+                    </a>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <script src="script.js"></script>
+
 </body>
+
 </html>
